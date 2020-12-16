@@ -12,7 +12,9 @@ spec:
   interval: 1m
   url: https://repo1.dsop.io/platform-one/big-bang/customers/template.git
   ref:
-    branch: main
+    branch: mcleroy
+#  secretRef:
+#    name: repo1-credentials
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization

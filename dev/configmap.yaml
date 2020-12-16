@@ -1,9 +1,10 @@
-hostname: bigbang.dev
-
 flux:
   interval: 1m
   rollback:
     cleanupOnFail: false
+
+clusterAuditor:
+  enabled: false
 
 gatekeeper:
   values:
@@ -23,6 +24,7 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
+  enabled: false
   values:
     elasticsearch:
       master:
@@ -42,7 +44,11 @@ logging:
             cpu: 1
             memory: 3Gi
 
+monitoring:
+  enabled: false
+
 twistlock:
+  enabled: false
   values:
     console:
       persistence:
