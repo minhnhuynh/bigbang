@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Secret
+metadata: null
+name: grafana-oauthinfo
+namespace: monitoring
+stringData:
+    client_id: ENC[AES256_GCM,data:ULNxnF8X6yIp91RRDB07lon96WfRKCp/JIof3D+NcRXzRFVR7sLmf58yaJSAWOIiJXabKk48bItvBQ==,iv:wf/1V8kSKk9AM0GfO8VPF9TiH8Bsrp+HCEupJ5nbFws=,tag://bhIVYMe6TDbswn9QIVvg==,type:str]
+    client_secret: ENC[AES256_GCM,data:p0zU44kV,iv:DWUUdUpyjUZxas174pGMKsoufGDhELVRNVvV/2tunWs=,tag:ctiaGYo3IG0jQB4/pxUC4g==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    lastmodified: '2020-12-22T22:09:28Z'
+    mac: ENC[AES256_GCM,data:kKZSUWocEV3r+qEjpdC/faNVQ6M9nE9jjJUU8wpD2d5PsN82ABcj6XFpKSm8wl1ElcFLkJ0iPmbz83Sj/Fp3m2E1/AN1jVoJNUwLi330Hl3We1t1ZoP7kJ7Cu213KAJqKOv1NpjTRnZBDvOb+zoDq2vpcld6H6YYvRGNekvZT3I=,iv:wqykjdTE7Gh2pCVyxoIzlnflG/FGvr71qWQRgipHXHw=,tag:TixqzTuHSaRwXKj9OawTNQ==,type:str]
+    pgp:
+    -   created_at: '2020-12-22T22:07:59Z'
+        enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA93W3Fi3CqSYAQ//fgJ/O5UCxYozQX/Cm9M9l+mw2thF1b8/hX7LJKD+FJAO
+            7+dol+g7maFDZxxeQ+g6FHadfidwuk7AczWX9QdEIH6VbEvuBwmUKi85ByX94RSc
+            jP82C4kzUeijVVDGpNtxdStlYn4sH9vlOhEOtEcFjHPOe6eYhSqVKrj4T2lnLUoD
+            U5eJNZ6niEcQZiZBglTm0NueBDVmHeD1Jj9cWMfWwUUTnuqOknXtMbcd+VbMaV16
+            juMsbzRZqlMxCYX5YnWaw45P5/nRE1L5uvrnP4jFgvjNV62HboAHdhd36xiw242T
+            YpgTAnBrpSGCm89LU6ivZBuwhtQn4IrXKUtwFo0ogwBps0c3lWTforzZgNhkLy0D
+            VWF3CfBeA/RvbsoCV0vrp6fyWyyipRwSUGM5n2TqFCwZwXmLa+kJ888OHsGi7br5
+            9bHftdPzuvmVErIFX91lpA9eNry5qGBLmV3Cd5y4CB5S/HEDEq4ArvWKt3SOswRa
+            I//o38cqQQl1mfCi/dGmXriQdz1lYvzHLWSQGHSzkyFUE4iA895Rv7Vdbgp8fW9I
+            DVp47pX4O/+6gA9SSCTmK5IRBOta0NqTCEVUkWkI+2ja/xkoS1BCRP+8wVi7tlvC
+            6IZakjBtr+Bio0EmkD4830HKEgtPlEmVDyBJws+0njKMC3nnRA03npvtC5aKMQnS
+            XgHNyn0m0KHplvHT592aeN4f/iutOh1HTCIyyAuffkcuokZWHz4ZI+QN2ljVCh+o
+            /oSFpDOpzCuxZmJGnRNO0FVyr5OoAtvXwrFS8XkidzMhubeCd/kzJY4v1PxEucM=
+            =NZRS
+            -----END PGP MESSAGE-----
+        fp: 41BFF8BAF2586039F6293D835A2E820C25FE527C
+    encrypted_regex: ^(data|stringData)$
+    version: 3.5.0
