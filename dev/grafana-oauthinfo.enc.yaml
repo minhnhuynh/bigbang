@@ -1,7 +1,8 @@
 apiVersion: v1
 kind: Secret
-name: grafana-oauthinfo
-namespace: monitoring
+metadata:
+    name: grafana-oauthinfo
+    namespace: monitoring
 stringData:
     client_id: ENC[AES256_GCM,data:ULNxnF8X6yIp91RRDB07lon96WfRKCp/JIof3D+NcRXzRFVR7sLmf58yaJSAWOIiJXabKk48bItvBQ==,iv:wf/1V8kSKk9AM0GfO8VPF9TiH8Bsrp+HCEupJ5nbFws=,tag://bhIVYMe6TDbswn9QIVvg==,type:str]
     client_secret: ENC[AES256_GCM,data:p0zU44kV,iv:DWUUdUpyjUZxas174pGMKsoufGDhELVRNVvV/2tunWs=,tag:ctiaGYo3IG0jQB4/pxUC4g==,type:str]
@@ -9,8 +10,8 @@ sops:
     kms: []
     gcp_kms: []
     azure_kv: []
-    lastmodified: '2020-12-23T15:40:40Z'
-    mac: ENC[AES256_GCM,data:nr2yEpjRiJ/yB2gF+atBX94x//xlq2ZQdi94tZmjqgtqRSv2SS42HNjkdxbHGtHeExfM5yVZ/Imam0zAHsflE6h5HoXNrnVrtdSW9cQc5aBvIQf2yaCDMjoD9Ieq1XEsECyHZf6JSaJPygMRVetZEreA3XSZEzAhc8kt/D0PKIc=,iv:f+NFRaOb86B39xF7z1x+o4GE20ssyjplga8dTXW6URI=,tag:ZWkRHQlg+wtzG7lfc6A7rQ==,type:str]
+    lastmodified: '2020-12-23T15:43:17Z'
+    mac: ENC[AES256_GCM,data:qJkEEgGreJVPuM4i/lbSE41DAiPPGaa5T1VUP3Xf/88mkYZ+FbnwWE4ABvFwO1M62dOXcjYdvtzNW1pus5yP6X6ATng99wOoIsTtWouKSzpSm9PxQkd0qEu+70ENB5WSwum1oZ8h+YIVFygbypaswYaiKzTShSx1vxO0dJg/cY4=,iv:2WJJ9HLcEadtlp2E8MfARwllwuMHsgwCmUqyFNkxjv4=,tag:5Nx94yAfu1siXhmOcPjvWA==,type:str]
     pgp:
     -   created_at: '2020-12-22T22:07:59Z'
         enc: |
