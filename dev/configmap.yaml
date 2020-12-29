@@ -28,7 +28,7 @@ monitoring:
     grafana.ini:
       server:
         # The root URL must be set with the proper url to enable oauth login
-        root_url: https://grafana.bigbang.dev/
+        root_url: https://grafana.{{ .Values.hostname }}/
       auth:
         # URL to redirect the user to after sign out
         signout_redirect_url: https://login.dsop.io/auth/realms/baby-yoda/protocol/openid-connect/logout
