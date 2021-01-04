@@ -49,6 +49,7 @@ For each environment, the following are the minimum required steps to fully conf
         ref:
           branch: main
       ```
+      - [Optional] if your git url is a private git repository you will need to create a `Secret` with the credentials to allow flux to clone your git repo down. More information on that can be found [here](https://toolkit.fluxcd.io/components/source/gitrepositories/#https-authentication)
 
    - Update the `Kustomization` resource with the path to your environment-specific [Kustomize](https://kustomize.io/) configuration.
 
