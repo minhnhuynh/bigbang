@@ -18,4 +18,4 @@ patchesStrategicMerge:
   spec:
     ref:
       $patch: replace
-      semver: "bb-843"
+      branch: "bb-843"
