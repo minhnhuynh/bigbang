@@ -64,4 +64,41 @@ twistlock:
 addons:
   authservice:
     enabled: true
-
+    values:
+      chains:
+      - name: kiali
+        match:
+          header: ":authority"
+          prefix: "kiali.bigbang.dev"
+        client_id: platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-kiali
+        client_secret: secret
+        callback_uri: https://kiali.bigbang.dev/login
+        cookie_name_prefix: hello_world
+        logout_path: /logout
+      - name: prometheus
+        match:
+          header: ":authority"
+          prefix: "prometheus.bigbang.dev"
+        client_id: platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-prometheus
+        client_secret: secret
+        callback_uri: https://prometheus.bigbang.dev/login/generic_oauth
+        cookie_name_prefix: hello_world
+        logout_path: /logout
+      - name: tracing
+        match:
+          header: ":authority"
+          prefix: "tracing.bigbang.dev"
+        client_id: platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-jaeger
+        client_secret: secret
+        callback_uri: https://tracing.bigbang.dev/login
+        cookie_name_prefix: hello_world
+        logout_path: /logout
+      - name: alertmanager
+        match:
+          header: ":authority"
+          prefix: "alertmanager.bigbang.dev"
+        client_id: platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-alertmanager
+        client_secret: secret
+        callback_uri: https://alertmanager.bigbang.dev/login
+        cookie_name_prefix: hello_world
+        logout_path: /logout
