@@ -45,7 +45,8 @@ logging:
             memory: 3Gi
 monitoring:
   values:
-    enabled: true
+    sso:
+      enabled: true
 
 twistlock:
   values:
