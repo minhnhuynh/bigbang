@@ -51,4 +51,4 @@ twistlock:
 monitoring:
   values:
     sso:
-      enabled: false
+      enabled: true
