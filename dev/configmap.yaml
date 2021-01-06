@@ -25,6 +25,7 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
+  enabled: false
   values:
     elasticsearch:
       master:
@@ -43,6 +44,13 @@ logging:
           limits:
             cpu: 1
             memory: 3Gi
+
+fluentbit:
+  enabled: false
+
+eckoperator:
+  enabled: false
+
 monitoring:
   values:
     sso:
