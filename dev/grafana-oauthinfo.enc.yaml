@@ -4,18 +4,18 @@ metadata:
     name: grafana-oauthinfo
     namespace: monitoring
 stringData:
-    client_id: ENC[AES256_GCM,data:6vRbjACMSN6e8Vcv4Xe6NMaPdn5zAsw9lG3CE4kVJagJuFmxSDbnKPuNSArTU59t4Ej0y85mW5ajVQ==,iv:F2kzc8mgGLUpFS1DxMjdltqyqQ/53x1CuaH6wthyQ8M=,tag:8ir9uQmRC3p1YPcSk7GJeg==,type:str]
-    client_secret: ENC[AES256_GCM,data:FdPnQ7Hj,iv:z/dhIbqnaBc+sN0e/HOR3ysa7pgrLJQhVMBUFebvKW8=,tag:ndn5ZZCjDnlMhmwiD3ExYA==,type:str]
+    client_id: ENC[AES256_GCM,data:HcMtlm97LjsytHGHJbJPJ1wezffgpWOq/P9VXBXOcNwd+4ATL3YAIFNnnevNQMUUXi2rIxXB1g1Prg==,iv:Wwh7jaz1hg6TFwSO9yNRrixgjdDkMo70YEAkXlZ2tow=,tag:62R+ceco2FZwqcwEzyH4Iw==,type:str]
+    client_secret: ENC[AES256_GCM,data:csY/zp9v,iv:9IVSuDGb3ZU+psrZAX7KD1y7kDq9CXraT6pXA27P6Sg=,tag:EEcQVEorcNrqjzVU/UoPjA==,type:str]
 sops:
     kms:
     -   arn: arn:aws-us-gov:kms:us-gov-west-1:927962728993:key/f131e19c-a804-4185-b75f-69b995eb9e6a
-        created_at: '2020-12-23T15:45:36Z'
-        enc: AQICAHiBokhIqRyovOZILp3cL4ZLeOMUIKZsOV08m7PNyQevrgFUJw76jYPr+QizNUvJgkj3AAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM1uXCieb/1rf/nnJsAgEQgDt168iYTH9q+R7ysJRqKmyHKdO2GV7u7OLE4/tE8FHh1RJ0eZF99D4GY8tDk6kUonegic3jbsrTs5qRLg==
+        created_at: '2020-12-23T16:20:22Z'
+        enc: AQICAHiBokhIqRyovOZILp3cL4ZLeOMUIKZsOV08m7PNyQevrgHMly+E6koV9nw4seBs9BbOAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMbvBeKNTH5s4SrQ4qAgEQgDvub/kvJRBYLG1w/vw69mvpEEdc1zp079KT7M9EaYuAhaTAhnwaXATyyERj5t8D4XK8fhkrdv2114ioWw==
         aws_profile: ""
     gcp_kms: []
     azure_kv: []
-    lastmodified: '2020-12-23T15:45:36Z'
-    mac: ENC[AES256_GCM,data:MybC5pdQ1loqZSF8s5mOIC2B+8c24siLsO8wMSptJ3jn/MMZUzgubLtiwy1LLUX42YfsbJK8jGBxluhidwjTzWcL/WbL+hJonV08nmY19oo/3WrokwQkVb2KocjHqGXtnpiWNmxTlT1vX6pR7mV0ZxQdIUI0TaZWLR8UpWWrlmY=,iv:Ik62tOpq3EY5S/mfEPu3WBn0OAWmKoV8Ufoyrc24FQE=,tag:oi0W7mePHwNfHc0HpE7EWA==,type:str]
+    lastmodified: '2020-12-23T16:20:22Z'
+    mac: ENC[AES256_GCM,data:ijZOCSXT4EZLZOHYTau5vsEGSAWKc8widkD2tPDwzVOH+HRdJaFpENUaSzHNyqSd+Ite9ve7tuk9JyY0U6hrr8JHp7eniVnlfbj3VLLIhvV+dO61+tT1pFjM/6y0Eecy/oJgOsVBG1VbWpOvvtFlP2QHbaX2F2a08Z+5G7c5W9w=,iv:sVpM6GifVVLc27RugmH5PgB/Hu2ymxN9+AhTZ6SJYjw=,tag:1mI5CZ3tu6L5+RBZ7sddCw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.5.0
