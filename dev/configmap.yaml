@@ -47,3 +47,7 @@ twistlock:
     console:
       persistence:
         size: 5Gi
+addons:
+  authservice:
+    enabled: true
+
