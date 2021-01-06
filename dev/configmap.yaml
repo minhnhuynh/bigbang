@@ -11,6 +11,8 @@ gatekeeper:
 
 istio:
   values:
+    sso:
+      enabled: true
     kiali:
       dashboard:
         auth:
@@ -41,6 +43,9 @@ logging:
           limits:
             cpu: 1
             memory: 3Gi
+monitoring:
+  values:
+    enabled: true
 
 twistlock:
   values:
