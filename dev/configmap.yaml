@@ -59,4 +59,3 @@ addons:
     enabled: true
     git:
       tag: null
-      branch: helmrepo
