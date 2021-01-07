@@ -102,3 +102,6 @@ addons:
         callback_uri: https://alertmanager.bigbang.dev/login
         cookie_name_prefix: hello_world
         logout_path: /logout
+
+  haproxy:
+    enabled: true
