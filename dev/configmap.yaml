@@ -48,5 +48,6 @@ twistlock:
       persistence:
         size: 5Gi
 
-anchore:
-  enabled: true
+addons:
+  anchore:
+    enabled: true
