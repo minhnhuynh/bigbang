@@ -50,4 +50,7 @@ twistlock:
 
 addons:
   anchore:
-    enabled: true
+    enabled: false
+    values:
+      sso:
+        enabled: true
