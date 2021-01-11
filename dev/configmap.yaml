@@ -54,9 +54,3 @@ addons:
     values:
       anchoreEnterpriseGlobal:
         enabled: true
-      sso:
-        enabled: true
-      anchoreGlobal:
-        oauthEnabled: true
-        saml:
-          secret: sso-secret
