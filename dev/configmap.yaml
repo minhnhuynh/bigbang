@@ -54,3 +54,8 @@ addons:
     values:
       anchoreEnterpriseGlobal:
         enabled: true
+        image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
+      anchoreEnterpriseUi:
+        image: registry1.dsop.io/ironbank/anchore/enterpriseui/enterpriseui:2.4.1
+      anchoreGlobal:
+        image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
