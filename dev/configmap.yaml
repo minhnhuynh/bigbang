@@ -50,7 +50,7 @@ twistlock:
 
 addons:
   anchore:
-    enabled: true
+    enabled: false
     values:
       anchoreEnterpriseGlobal:
         enabled: true
@@ -59,4 +59,3 @@ addons:
       oauthEnabled: true
       saml:
         secret: sso-secret
-      
