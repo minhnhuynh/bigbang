@@ -67,5 +67,5 @@ addons:
       anchoreEnterpriseUi:
         image: registry1.dsop.io/ironbank/anchore/enterpriseui/enterpriseui:2.4.1
       anchore-ui-redis:
-        enabled: false
-        externalEndpoint: "redis://:foobar@ec2-52-61-212-99.us-gov-west-1.compute.amazonaws.com:6379"
+        #enabled: false
+        #externalEndpoint: "redis://:pass@host:6379"
