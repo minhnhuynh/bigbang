@@ -53,7 +53,32 @@ addons:
     git:
       branch: main
       tag: null
-    enabled: true
+    enabled: false
     values:
+      postgresql:
+        image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
+        imagePullSecrets: private-registry
+
+      anchoreGlobal:
+        image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
+        imagePullSecretName: private-registry
+
       anchoreEnterpriseGlobal:
-        enabled: false
+        image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
+        imagePullSecretName: private-registry
+
+      anchore-feeds-db:
+        image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
+        imagePullSecrets: private-registry
+
+      anchoreEnterpriseUi:
+        image: registry1.dsop.io/ironbank/anchore/enterpriseui/enterpriseui:2.4.1
+        imagePullSecretName: private-registry
+
+      anchore-ui-redis:
+        image:
+          registry: registry1.dsop.io/ironbank
+          repository: opensource/redis/redis6
+          tag: 6.0.4
+          pullSecrets:
+            - private-registry
