@@ -23,6 +23,7 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
+  enabled: false
   values:
     elasticsearch:
       master:
@@ -50,7 +51,7 @@ twistlock:
 
 addons:
   anchore:
-    enabled: true
+    enabled: false
     values:
       anchoreEnterpriseGlobal:
         enabled: true
