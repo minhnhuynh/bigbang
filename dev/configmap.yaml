@@ -10,9 +10,9 @@ gatekeeper:
     replicas: 1
 
 istio:
+  sso:
+    enabled: true
   values:
-    sso:
-      enabled: true
     kiali:
       dashboard:
         auth:
@@ -52,9 +52,12 @@ eckoperator:
   enabled: false
 
 monitoring:
+  sso:
+    enabled: true
   values:
-    sso:
-      enabled: true
+    prometheusOperator:
+      tls:
+        enabled: false
 
 twistlock:
   values:
