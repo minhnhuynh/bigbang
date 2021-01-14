@@ -50,6 +50,9 @@ twistlock:
 
 addons:
   anchore:
+    git:
+      branch: main
+      tag: null
     enabled: true
     values:
       anchoreEnterpriseGlobal:
