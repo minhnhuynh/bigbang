@@ -24,6 +24,7 @@ istio:
 
 logging:
   values:
+    sso: enabled
     elasticsearch:
       master:
         count: 1
