@@ -60,13 +60,9 @@ addons:
       anchoreGlobal:
         image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
       anchoreEnterpriseGlobal:
-        enabled: true 
+        enabled: true
         image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
       anchore-feeds-db:
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
       anchoreEnterpriseUi:
         image: registry1.dsop.io/ironbank/anchore/enterpriseui/enterpriseui:2.4.1
-      anchore-ui-redis:
-        enabled: false
-        image:
-          registry: registry1.dsop.io/ironbank
