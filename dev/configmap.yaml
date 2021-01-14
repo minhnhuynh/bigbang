@@ -58,6 +58,9 @@ monitoring:
     prometheusOperator:
       tls:
         enabled: false
+    admissionWebhooks:
+      patch:
+        enabled: false
 
 twistlock:
   values:
