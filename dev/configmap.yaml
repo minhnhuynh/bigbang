@@ -53,7 +53,7 @@ addons:
     git:
       branch: main
       tag: null
-    enabled: false
+    enabled: true
     values:
       postgresql:
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
