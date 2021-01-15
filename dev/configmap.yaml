@@ -56,6 +56,7 @@ addons:
     enabled: true
     values:
       postgresql:
+        enabled: true
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
       anchoreGlobal:
         image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
@@ -63,9 +64,11 @@ addons:
         enabled: true 
         image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
       anchore-feeds-db:
+        enabled: true
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
       anchoreEnterpriseUi:
         image: registry1.dsop.io/ironbank/anchore/enterpriseui/enterpriseui:2.4.1
       anchore-ui-redis:
+        enabled: true
         image:
           registry: registry1.dsop.io/ironbank
