@@ -10,8 +10,8 @@ gatekeeper:
     replicas: 1
 
 istio:
-  sso:
-    enabled: true
+#  sso:
+#    enabled: true
   values:
     kiali:
       dashboard:
@@ -52,9 +52,13 @@ eckoperator:
   enabled: false
 
 monitoring:
-  sso:
-    enabled: true
+#  sso:
+#    enabled: true
   values:
+#    dashboards:
+#      default:
+#        nginx-ingress-test:
+#          json: |
     prometheusOperator:
       tls:
         enabled: false
@@ -69,7 +73,7 @@ twistlock:
         size: 5Gi
 addons:
   authservice:
-    enabled: true
+    enabled: false
 #    values:
 #      chains:
 #        kiali:

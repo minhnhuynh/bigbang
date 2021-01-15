@@ -22,3 +22,5 @@ patchesStrategicMerge:
     name: bigbang
   spec:
     interval: 1m
+resources:
+- istio-mesh-dashboard.yaml
