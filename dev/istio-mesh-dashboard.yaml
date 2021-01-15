@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: monitoring
+  namespace: bigbang
   name: istio-messh-dashboard
   labels:
     grafana_dashboard: "1"
