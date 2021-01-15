@@ -901,6 +901,8 @@ monitoring:
                 "version": 2,
                 "description": "Kubernetes Deployments Overview"
               }
+      dashboardsConfigMaps:
+        default: "k8s-deployments"
     prometheusOperator:
       tls:
         enabled: false
