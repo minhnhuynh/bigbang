@@ -66,6 +66,3 @@ addons:
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
       anchoreEnterpriseUi:
         image: registry1.dsop.io/ironbank/anchore/enterpriseui/enterpriseui:2.4.1
-      anchore-ui-redis:
-        #enabled: false
-        #externalEndpoint: "redis://:pass@host:6379"
