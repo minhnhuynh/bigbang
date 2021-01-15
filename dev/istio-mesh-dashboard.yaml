@@ -2,9 +2,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   namespace: monitoring
-  name: istio-meshh-dashboard
+  name: istio-messh-dashboard
   labels:
-    grafana_dashboard: "101"
+    grafana_dashboard: "1"
 data:
   istio-mesh-dashboard.json: |
     {
