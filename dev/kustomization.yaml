@@ -1,4 +1,4 @@
-namespace: bigbang
+#namespace: bigbang
 bases:
 - ../base
 configMapGenerator:
@@ -13,6 +13,7 @@ patchesStrategicMerge:
   kind: GitRepository
   metadata:
     name: bigbang
+    namespace: bigbang
   spec:
     interval: 1m
 - |-
@@ -20,6 +21,7 @@ patchesStrategicMerge:
   kind: HelmRelease
   metadata:
     name: bigbang
+    namespace: bigbang
   spec:
     interval: 1m
 resources:
