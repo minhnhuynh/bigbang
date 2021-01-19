@@ -53,7 +53,7 @@ addons:
     git:
       branch: keycloak-dev
       tag: null
-    enabled: true
+    enabled: false
     values:
       sso:
         enabled: true
