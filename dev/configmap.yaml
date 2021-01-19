@@ -61,6 +61,9 @@ addons:
         enabled: true
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
       anchoreGlobal:
+        oauthEnabled: true
+        saml:
+          secret: sso-secret
         image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
       anchoreEnterpriseGlobal:
         enabled: true 
