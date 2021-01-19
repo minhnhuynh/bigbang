@@ -51,10 +51,12 @@ twistlock:
 addons:
   anchore:
     git:
-      branch: main
+      branch: keycloak-dev
       tag: null
     enabled: true
     values:
+      sso:
+        enabled: true
       postgresql:
         enabled: true
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
