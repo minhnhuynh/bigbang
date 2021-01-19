@@ -64,3 +64,6 @@ fluentbit:
 monitoring:
   enabled: false
 
+minio:
+  enabled: true
+
