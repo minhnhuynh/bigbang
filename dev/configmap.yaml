@@ -29,6 +29,15 @@ logging:
   values:
     elasticsearch:
       master:
+        initContainers:
+          - name: sysctl
+            securityContext:
+            privileged: true
+            command: ['sh', '-c', 'sysctl -w vm.max_map_count=262144']
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 0
+          fsGroup: 0
         count: 1
         persistence:
           size: 5Gi
