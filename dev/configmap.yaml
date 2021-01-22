@@ -23,6 +23,9 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
+  git:
+    tag: null
+    branch: elastic-node-flexibility
   values:
     elasticsearch:
       master:
