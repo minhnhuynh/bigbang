@@ -67,3 +67,8 @@ addons:
       user: "anchore"
       password: "anchore123"
       mainDB: "anchore"
+    enterprise:
+      enabled: true
+    enterpriseUiRedis:
+      enabled: true
+      password: "anchore123"
