@@ -60,7 +60,7 @@ addons:
     git:
       branch: main
       tag: null
-    enabled: false
+    enabled: true
     adminPassword: "foobar"
     postgresql:
       enabled: true
