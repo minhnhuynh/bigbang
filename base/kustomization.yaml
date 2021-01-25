@@ -2,7 +2,7 @@
 #   both the bases reference and the GitRepository reference
 namespace: bigbang
 bases:
-- https://repo1.dsop.io/platform-one/big-bang/umbrella.git/base/?ref=1.0.4
+- https://repo1.dsop.io/platform-one/big-bang/umbrella.git/base/?ref=anchore-addon
 configMapGenerator:
   - name: common
     behavior: merge
@@ -18,4 +18,4 @@ patchesStrategicMerge:
   spec:
     ref:
       $patch: replace
-      semver: "1.0.4"
+      branch: "anchore-addon"
