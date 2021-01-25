@@ -22,6 +22,12 @@ istio:
         # Enable cross zone load balancing
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
+eckoperator:
+  enabled: false
+
+fluentbit:
+  enabled: false
+
 logging:
   enabled: false
   values:
@@ -44,7 +50,7 @@ logging:
             memory: 3Gi
 
 clusterAuditor:
-   enabled: false
+  enabled: false
 
 twistlock:
   values:
