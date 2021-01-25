@@ -52,32 +52,32 @@ twistlock:
       persistence:
         size: 5Gi
 
-# addons:
-#   anchore:
-#     git:
-#       branch: main
-#       tag: null
-#     enabled: true
-#     values:
-#       #sso:
-#       #  enabled: true
-#       postgresql:
-#         enabled: true
-#         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
-#       anchoreGlobal:
-#         oauthEnabled: true
-#         saml:
-#           secret: sso-secret
-#         image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
-#       anchoreEnterpriseGlobal:
-#         enabled: false
-#         image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
-#       anchore-feeds-db:
-#         enabled: true
-#         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
-#       anchoreEnterpriseUi:
-#         image: registry1.dsop.io/ironbank/anchore/enterpriseui/enterpriseui:2.4.1
-#       anchore-ui-redis:
-#         enabled: true
-#         image:
-#           registry: registry1.dsop.io/ironbank
+addons:
+  anchore:
+    git:
+      branch: main
+      tag: null
+    enabled: true
+    values:
+      #sso:
+      #  enabled: true
+      postgresql:
+        enabled: true
+        image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
+      anchoreGlobal:
+        oauthEnabled: true
+        saml:
+          secret: sso-secret
+        image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
+      anchoreEnterpriseGlobal:
+        enabled: false
+        image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
+      anchore-feeds-db:
+        enabled: true
+        image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
+      anchoreEnterpriseUi:
+        image: registry1.dsop.io/ironbank/anchore/enterpriseui/enterpriseui:2.4.1
+      anchore-ui-redis:
+        enabled: true
+        image:
+          registry: registry1.dsop.io/ironbank
