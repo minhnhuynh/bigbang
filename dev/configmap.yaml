@@ -58,7 +58,7 @@ twistlock:
 addons:
   anchore:
     git:
-      branch: "main"
+      branch: "keycloak-dev"
       tag: null
     enabled: true
     adminPassword: "foobar"
