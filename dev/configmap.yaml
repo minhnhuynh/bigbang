@@ -58,7 +58,7 @@ twistlock:
 addons:
   anchore:
     git:
-      branch: main
+      branch: "main"
       tag: null
     enabled: true
     adminPassword: "foobar"
