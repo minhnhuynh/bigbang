@@ -66,7 +66,8 @@ addons:
       enabled: true
       user: "anchore"
       password: "anchore123"
-      mainDB: "anchore"
+      mainDB: "anchoremain"
+      enterpriseFeedsDB: "anchorefeeds"
     enterprise:
       enabled: true
     enterpriseUiRedis:
