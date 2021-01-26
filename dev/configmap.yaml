@@ -57,9 +57,9 @@ twistlock:
 
 addons:
   anchore:
-    git:
-      branch: "main"
-      tag: null
+    # git:
+    #   branch: "main"
+    #   tag: null
     enabled: true
     # adminPassword: "foobar"
     # postgresql:
