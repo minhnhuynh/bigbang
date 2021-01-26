@@ -58,18 +58,18 @@ twistlock:
 addons:
   anchore:
     git:
-      branch: "keycloak-dev"
+      branch: "main"
       tag: null
     enabled: true
-    adminPassword: "foobar"
-    postgresql:
-      enabled: true
-      user: "anchore"
-      password: "anchore123"
-      mainDB: "anchoremain"
-      enterpriseFeedsDB: "anchorefeeds"
-    enterprise:
-      enabled: true
-    enterpriseUiRedis:
-      enabled: true
-      password: "anchore123"
+    # adminPassword: "foobar"
+    # postgresql:
+    #   enabled: true
+    #   user: "anchore"
+    #   password: "anchore123"
+    #   mainDB: "anchoremain"
+    #   enterpriseFeedsDB: "anchorefeeds"
+    # enterprise:
+    #   enabled: true
+    # enterpriseUiRedis:
+    #   enabled: true
+    #   password: "anchore123"
