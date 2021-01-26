@@ -6,6 +6,7 @@ flux:
     cleanupOnFail: false
 
 gatekeeper:
+  enabled: false
   values:
     replicas: 1
 
@@ -49,7 +50,10 @@ logging:
             cpu: 1
             memory: 3Gi
 
+monitoring:
+  enabled: false
 twistlock:
+  enabled: false
   values:
     console:
       persistence:
