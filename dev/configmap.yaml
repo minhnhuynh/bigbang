@@ -61,12 +61,12 @@ addons:
       branch: "main"
       tag: null
     enabled: true
-    adminPassword: "foobar"
+    adminPassword: foobar
     postgresql:
       enabled: true
-      user: "anchore"
-      password: "anchore123"
-      mainDB: "anchoremain"
+      user: anchore
+      password: anchore123
+      mainDB: anchoremain
     #   enterpriseFeedsDB: "anchorefeeds"
     # enterprise:
     #   enabled: true
