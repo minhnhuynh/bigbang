@@ -64,17 +64,21 @@ addons:
       branch: main
       tag: null
     enabled: true
-    values:
+    values: {}
       #sso:
       #  enabled: true
-      postgresql:
-        enabled: true
-        image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
-      anchoreGlobal:
+    postgresql:
+      enabled: true
+      # image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
+      user: anchore
+      password: anchore123
+      mainDB: anchoremain
+    # anchoreGlobal:
       #   oauthEnabled: false
         # saml:
         #   secret: sso-secret
-        image: registry1.dsop.io/ironbank/anchore/engine/engine:0.8.1
+      # adminPassword: foobar
+      # image: registry1.dsop.io/ironbank/anchore/engine/engine:0.8.1
       # anchoreEnterpriseGlobal:
       #   enabled: false
         #image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
@@ -87,3 +91,12 @@ addons:
       #   enabled: false
       #   image:
       #     registry: registry1.dsop.io/ironbank
+    # postgresql:
+    #   enabled: true
+
+    #   enterpriseFeedsDB: anchorefeeds
+    # enterprise:
+    #   enabled: true
+    # enterpriseUiRedis:
+    #   enabled: true
+    #   password: anchore123
