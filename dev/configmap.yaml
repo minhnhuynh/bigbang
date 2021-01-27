@@ -68,7 +68,6 @@ addons:
       #  enabled: true
     postgresql:
       enabled: true
-      image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
       user: anchore
       password: anchore123
       mainDB: anchoremain
@@ -79,6 +78,8 @@ addons:
         #   secret: sso-secret
       # adminPassword: foobar
         image: registry1.dsop.io/ironbank/anchore/engine/engine:0.8.1
+      postgresql:
+        image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
       # anchoreEnterpriseGlobal:
       #   enabled: false
         #image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
