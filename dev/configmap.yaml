@@ -68,7 +68,7 @@ addons:
       #  enabled: true
     postgresql:
       enabled: true
-      # image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
+      image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
       user: anchore
       password: anchore123
       mainDB: anchoremain
