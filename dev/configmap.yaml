@@ -67,9 +67,9 @@ addons:
     adminPassword: foobar
     postgresql:
       enabled: false
-      user: anchore
-      password: anchore123
-      mainDB: anchoremain
+      #user: anchore
+      #password: anchore123
+      #mainDB: anchoremain
     values:
       anchoreGlobal:
         image: registry1.dsop.io/ironbank/anchore/engine/engine:0.8.1
