@@ -61,11 +61,10 @@ twistlock:
 addons:
   anchore:
     git:
-      branch: main
+      branch: "main"
       tag: null
     enabled: true
-      #sso:
-      #  enabled: true
+    adminPassword: foobar
     postgresql:
       enabled: true
       user: anchore
@@ -73,13 +72,11 @@ addons:
       mainDB: anchoremain
     values:
       anchoreGlobal:
-      #   oauthEnabled: false
-        # saml:
-        #   secret: sso-secret
-      # adminPassword: foobar
         image: registry1.dsop.io/ironbank/anchore/engine/engine:0.8.1
       postgresql:
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
+    enterprise:
+      enabled: false
       # anchoreEnterpriseGlobal:
       #   enabled: false
         #image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
@@ -92,12 +89,3 @@ addons:
       #   enabled: false
       #   image:
       #     registry: registry1.dsop.io/ironbank
-    # postgresql:
-    #   enabled: true
-
-    #   enterpriseFeedsDB: anchorefeeds
-    # enterprise:
-    #   enabled: true
-    # enterpriseUiRedis:
-    #   enabled: true
-    #   password: anchore123
