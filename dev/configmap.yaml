@@ -65,8 +65,8 @@ addons:
       tag: null
     enabled: true
     adminPassword: foobar
-    postgresql:
-      enabled: false
+    #postgresql:
+    #  enabled: false
       #user: anchore
       #password: anchore123
       #mainDB: anchoremain
