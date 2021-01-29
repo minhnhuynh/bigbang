@@ -6,6 +6,7 @@ flux:
     cleanupOnFail: false
 
 gatekeeper:
+  enabled: false
   values:
     replicas: 1
 
@@ -50,6 +51,9 @@ logging:
             memory: 3Gi
 
 clusterAuditor:
+  enabled: false
+
+monitoring:
   enabled: false
 
 twistlock:
