@@ -69,9 +69,9 @@ addons:
     postgresql:
       enabled: true
     enterprise:
-      enabled: false
+      enabled: true
     enterpriseUiRedis:
-      enabled: false
+      enabled: true
     sso:
       enabled: false
       clientId: "platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-anchore"
