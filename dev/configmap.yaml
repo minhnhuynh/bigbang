@@ -62,20 +62,17 @@ twistlock:
 addons:
   anchore:
     git:
-      branch: "keycloak-dev"
+      branch: "main"
       tag: null
     enabled: true
     adminPassword: foobar
     postgresql:
       enabled: true
     enterprise:
-      enabled: true
+      enabled: false
     enterpriseUiRedis:
-      enabled: true
+      enabled: false
     sso:
-      enabled: true
+      enabled: false
       clientId: "platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-anchore"
       samlDescriptorUrl: "https://login.dso.mil/auth/realms/baby-yoda/protocol/saml/descriptor"
-    values:
-      anchoreGlobal:
-        hashedPasswords: true
