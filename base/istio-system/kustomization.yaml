@@ -1,3 +1,0 @@
-namespace: istio-system
-resources:
-- ingress-cert.enc.yaml
