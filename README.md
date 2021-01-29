@@ -124,6 +124,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
    kubectl apply -f bigbang.yaml
 
    # Watch deployment
+   # NOTE: The Kustomization resource may fail at first with an error about the istio-system namespace.  This is normal since the Helm Release for istio will create that namespace and it has not run yet.  This should resolve itself within a few minutes
    watch kubectl get gitrepositories,kustomizations,hr,po -A
 
    # Test deployment by opening a browser to "kiali.bigbang.dev" to get to the Kiali application deployed by Istio.
