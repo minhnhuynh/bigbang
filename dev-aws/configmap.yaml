@@ -3,6 +3,9 @@ flux:
   rollback:
     cleanupOnFail: false
 
+clusterAuditor:
+  enabled: false
+
 gatekeeper:
   values:
     replicas: 1
@@ -21,6 +24,7 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
+  enabled: true
   values:
     elasticsearch:
       master:
@@ -40,8 +44,32 @@ logging:
             cpu: 1
             memory: 3Gi
 
+monitoring:
+  enabled: true
+
 twistlock:
+  enabled: false
   values:
     console:
       persistence:
         size: 5Gi
+
+addons:
+  gitlab:
+    enabled: true
+    git:
+      tag: null
+      branch: main
+    values:
+      postgresql:
+        install: true
+      global:
+        minio:
+          enabled: true
+
+  gitlabRunner:
+    enabled: true
+    git:
+      tag: null
+      branch: bb-1270/monitoring-logging-integration
+    values: {}
