@@ -10,6 +10,7 @@ configMapGenerator:
       - values.yaml=configmap.yaml
 patchesStrategicMerge:
 - secrets.enc.yaml
+- ingress-cert.enc.yaml
 - |-
   apiVersion: source.toolkit.fluxcd.io/v1beta1
   kind: GitRepository
