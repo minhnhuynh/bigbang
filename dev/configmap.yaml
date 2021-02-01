@@ -65,7 +65,6 @@ addons:
       branch: "keycloak-dev"
       tag: null
     enabled: true
-    adminPassword: foobar
     postgresql:
       enabled: true
     enterprise:
