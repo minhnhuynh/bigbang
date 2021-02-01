@@ -81,7 +81,7 @@ addons:
       postgresql:
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
     enterprise:
-      enabled: false
+      enabled: true
       # anchoreEnterpriseGlobal:
       #   enabled: false
         #image: registry1.dsop.io/ironbank/anchore/enterprise/enterprise:2.4.1
