@@ -77,7 +77,7 @@ addons:
     values:
       anchoreGlobal:
         image: registry1.dsop.io/ironbank/anchore/engine/engine:0.8.1
-        hashedPasswords: false
+        #hashedPasswords: false
       postgresql:
         image: registry1.dsop.io/ironbank/opensource/postgres/postgresql96:9.6.18
     enterprise:
