@@ -72,3 +72,8 @@ addons:
       enabled: false
       clientId: "platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-anchore"
       samlDescriptorUrl: "https://login.dso.mil/auth/realms/baby-yoda/protocol/saml/descriptor"
+    values:
+      anchore-feeds-db:
+        enabled: false
+      anchoreEnterpriseFeeds:
+        enabled: false
