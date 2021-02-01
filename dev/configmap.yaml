@@ -62,7 +62,7 @@ twistlock:
 addons:
   anchore:
     git:
-      branch: "keycloak-dev"
+      branch: "main"
       tag: null
     enabled: true
     postgresql:
