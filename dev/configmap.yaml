@@ -5,6 +5,9 @@ flux:
   rollback:
     cleanupOnFail: false
 
+clusterAuditor:
+  enabled: false
+
 gatekeeper:
   enabled: false
   values:
@@ -44,6 +47,9 @@ logging:
             cpu: 1
             memory: 3Gi
 
+monitoring:
+  enabled: false
+
 twistlock:
   enabled: false
   values:
@@ -52,16 +58,10 @@ twistlock:
         size: 5Gi
 
 
-clusterAuditor:
-  enabled: false
-
 eckoperator:
   enabled: false
 
 fluentbit:
-  enabled: false
-
-monitoring:
   enabled: false
 
 minio:
