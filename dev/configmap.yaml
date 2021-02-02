@@ -62,7 +62,7 @@ eckoperator:
   enabled: false
 
 fluentbit:
-  enabled: false
+  enabled: true
 
 minio:
   enabled: true
