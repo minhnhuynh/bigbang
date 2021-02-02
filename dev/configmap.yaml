@@ -59,7 +59,7 @@ twistlock:
 
 
 eckoperator:
-  enabled: false
+  enabled: true
 
 fluentbit:
   enabled: true
