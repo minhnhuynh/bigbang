@@ -1,14 +1,14 @@
 # When updating the version of BigBang, make sure to update
 #   both the bases reference and the GitRepository reference
 bases:
-- git::https://repo1.dsop.io/platform-one/big-bang/umbrella.git//base?ref=1.0.6
-resources:
-- ingress-cert.enc.yaml
+- git::https://repo1.dsop.io/platform-one/big-bang/umbrella.git//base?ref=bb-1287
+
 configMapGenerator:
   - name: common
     behavior: merge
     files:
       - values.yaml=configmap.yaml
+
 patchesStrategicMerge:
 - secrets.enc.yaml
 - |-
@@ -19,4 +19,4 @@ patchesStrategicMerge:
   spec:
     ref:
       $patch: replace
-      semver: "1.0.6"
+      branch: bb-1287

@@ -1,3 +1,13 @@
 creation_rules:
-  - encrypted_regex: '^(data|stringData)$'
-    pgp: 41BFF8BAF2586039F6293D835A2E820C25FE527C
+  # Rules for `base` only
+  - path_regex: .*/base/.*
+    kms: 'arn:aws-us-gov:kms:us-gov-west-1:927962728993:key/f131e19c-a804-4185-b75f-69b995eb9e6a'
+    # only encrypt the data so that flux sops support will work
+    encrypted_regex: '^(data|stringData)$'
+
+  # Rules for `dev` only
+  - path_regex: .*/dev/.*
+    kms: 'arn:aws-us-gov:kms:us-gov-west-1:927962728993:key/f131e19c-a804-4185-b75f-69b995eb9e6a'
+    # only encrypt the data so that flux sops support will work
+    encrypted_regex: '^(data|stringData)$'
+

@@ -12,7 +12,7 @@ spec:
   interval: 1m
   url: https://repo1.dsop.io/platform-one/big-bang/customers/template.git
   ref:
-    branch: main
+    branch: kwilder
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
@@ -28,5 +28,5 @@ spec:
   prune: true
   decryption:
     provider: sops
-    secretRef:
-      name: sops-gpg
+    # secretRef:
+    #   name: sops-gpg

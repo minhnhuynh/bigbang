@@ -9,6 +9,7 @@ clusterAuditor:
   enabled: false
 
 gatekeeper:
+  enabled: false
   values:
     replicas: 1
 
@@ -26,7 +27,7 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
-  enabled: true
+  enabled: false
   values:
     elasticsearch:
       master:
@@ -46,12 +47,76 @@ logging:
             cpu: 1
             memory: 3Gi
 
+eckoperator:
+  enabled: false
+
+fluentbit:
+  enabled: false
+
 monitoring:
-  enabled: true
+  enabled: false
 
 twistlock:
-  enabled: true
+  enabled: false
   values:
     console:
       persistence:
         size: 5Gi
+
+# Gloabl SSO parameters
+sso:
+  oidc:
+    host: login.dso.mil
+    realm: baby-yoda
+  client_secret: ""
+
+addons:
+  gitlab:
+    enabled: true
+    hostnames:
+      gitlab: code.bigbang.dev
+      registry: registry.bigbang.dev
+    sso:
+      enabled: true
+      label: "Platform One SSO"
+      client_id: "platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-gitlab"
+    database:
+      external: false
+      host: postgres-postgresql-headless.postgres.svc.cluster.local
+      port: 5432
+      username: postgres
+      database: postgres
+      password: postgres
+    objectstorage:
+      external: false
+      type: minio
+      endpoint: http://minio.minio.svc.cluster.local:9000
+      host: minio.minio.svc.cluster.local
+      region: us-west-1
+      accessKey: myaccesskey
+      accessSecret: mysecretkey
+      bucketPrefix: dev-
+    # objectstorage:
+    #   external: false
+    #   type: s3
+    #   host: s3.amazonaws.com
+    #   region: us-gov-west-1
+    #   # accessKey: myaccesskey
+    #   # accessSecret: mysecretkey
+    #   bucketPrefix: kwilder-
+
+    # values: 
+    #   global:
+    #     psql:
+    #       host:  testdb.io
+    #       port: 7777
+    #       username: postgres2
+    #       database: postgres2
+          # password:
+          #   secret: gitlab-database2
+          #   key: PGPASSWORD2
+    #     appConfig:
+    #       omniauth:
+    #         enabled: true
+    #         allowSingleSignOn: ['blah']
+    #         blockAutoCreatedUsers: true
