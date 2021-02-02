@@ -5,6 +5,9 @@ flux:
   rollback:
     cleanupOnFail: false
 
+clusterAuditor:
+  enabled: false
+
 gatekeeper:
   values:
     replicas: 1
@@ -16,6 +19,33 @@ istio:
         auth:
           strategy: anonymous
     ingressGateway:
+      ports:
+        - port: 15021
+          targetPort: 15021
+          name: status-port
+          protocol: TCP
+        - port: 80
+          targetPort: 8080
+          name: http2
+          protocol: TCP
+        - port: 443
+          targetPort: 8443
+          name: https
+          protocol: TCP
+        - port: 15012
+          targetPort: 15012
+          name: tcp-istiod
+          protocol: TCP
+        # This is the port where sni routing happens
+        - port: 15443
+          targetPort: 15443
+          name: tls
+          protocol: TCP
+        - port: 8083
+          targetPort: 8083
+          name: twist
+          protocol: TCP
+
       serviceAnnotations:
         # Ensure mission apps have internal load balancer only
         service.beta.kubernetes.io/aws-load-balancer-internal: "true"
@@ -23,6 +53,7 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
+  enabled: false
   values:
     elasticsearch:
       master:
@@ -42,7 +73,14 @@ logging:
             cpu: 1
             memory: 3Gi
 
+fluentbit:
+  enabled: false
+eck-operator:
+  enabled: false
+
 twistlock:
+  git:
+    branch: "ib-image"
   values:
     console:
       persistence:

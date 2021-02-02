@@ -2,7 +2,7 @@
 #   both the bases reference and the GitRepository reference
 namespace: bigbang
 bases:
-- https://repo1.dsop.io/platform-one/big-bang/umbrella.git/base/?ref=bb-843-grafana
+- https://repo1.dsop.io/platform-one/big-bang/umbrella.git/base/?ref=1.0.6
 configMapGenerator:
   - name: common
     behavior: merge
@@ -18,4 +18,4 @@ patchesStrategicMerge:
   spec:
     ref:
       $patch: replace
-      branch: "bb-843-grafana"
+      tag: "1.0.6"
