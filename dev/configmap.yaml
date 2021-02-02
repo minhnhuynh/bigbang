@@ -9,7 +9,7 @@ clusterAuditor:
   enabled: false
 
 gatekeeper:
-  enabled: false
+  enabled: true
   values:
     replicas: 1
 
