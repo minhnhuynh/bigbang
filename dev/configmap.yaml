@@ -105,8 +105,8 @@ addons:
     #   # accessSecret: mysecretkey
     #   bucketPrefix: kwilder-
 
-    # values: 
-    #   global:
+    values: 
+      global:
     #     psql:
     #       host:  testdb.io
     #       port: 7777
@@ -115,8 +115,9 @@ addons:
           # password:
           #   secret: gitlab-database2
           #   key: PGPASSWORD2
-    #     appConfig:
-    #       omniauth:
-    #         enabled: true
-    #         allowSingleSignOn: ['blah']
-    #         blockAutoCreatedUsers: true
+        appConfig:
+          omniauth:
+            # enabled: true
+            # allowSingleSignOn: ['blah']
+            # blockAutoCreatedUsers: true
+            autoLinkSamlUser: true
