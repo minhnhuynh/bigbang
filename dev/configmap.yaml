@@ -63,11 +63,8 @@ addons:
   anchore:
     enabled: true
     postgresql:
-      enabled: true
+      external: false
     enterprise:
       enabled: true
-    enterpriseUiRedis:
-      enabled: true
-    sso:
-      enabled: false
-      client_id: "platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-anchore"
+    redis:
+      external: false
