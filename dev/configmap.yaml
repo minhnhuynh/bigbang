@@ -89,7 +89,7 @@ addons:
       password: postgres
     objectstorage:
       type: minio
-      endpoint: https://minio.minio.svc.cluster.local:9000
+      endpoint: http://minio.minio.svc.cluster.local:9000
       region: us-west-1
       accessKey: myaccesskey
       accessSecret: mysecretkey
