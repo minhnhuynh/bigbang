@@ -82,18 +82,18 @@ addons:
       client_id: "platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-gitlab"
       client_secret: ""
     database:
-      host: "" # postgres-postgresql-headless.postgres.svc.cluster.local
+      host: postgres-postgresql-headless.postgres.svc.cluster.local
       port: 5432
       username: postgres
       database: postgres
       password: postgres
     objectstorage:
       type: minio
-      endpoint: "" # https://minio.minio.svc.cluster.local:9000
+      endpoint: https://minio.minio.svc.cluster.local:9000
       region: us-west-1
       accessKey: myaccesskey
       accessSecret: mysecretkey
-      bucketPrefix: "kwilder"
+      bucketPrefix: kwilder
     # objectstorage:
     #   type: s3
     #   endpiont: https://s3.amazonaws.com
