@@ -96,7 +96,7 @@ addons:
     #   bucketPrefix: kwilder
     objectstorage:
       type: s3
-      endpiont: https://s3.amazonaws.com
+      endpoint: https://s3.amazonaws.com
       region: us-gov-west-1
       # accessKey: myaccesskey
       # accessSecret: mysecretkey
