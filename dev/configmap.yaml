@@ -87,23 +87,23 @@ addons:
       username: postgres
       database: postgres
       password: postgres
-    objectstorage:
-      type: minio
-      endpoint: http://minio.minio.svc.cluster.local:9000
-      region: us-west-1
-      accessKey: myaccesskey
-      accessSecret: mysecretkey
-      bucketPrefix: kwilder
     # objectstorage:
-    #   type: s3
-    #   endpiont: https://s3.amazonaws.com
-    #   region: us-gov-west-1
+    #   type: minio
+    #   endpoint: http://minio.minio.svc.cluster.local:9000
+    #   region: us-west-1
     #   accessKey: myaccesskey
     #   accessSecret: mysecretkey
-    #   bucketPrefix: "kwilder"
+    #   bucketPrefix: kwilder
+    objectstorage:
+      type: s3
+      endpiont: https://s3.amazonaws.com
+      region: us-gov-west-1
+      # accessKey: myaccesskey
+      # accessSecret: mysecretkey
+      bucketPrefix: kwilder
 
-    values: 
-      global:
+    # values: 
+    #   global:
     #     psql:
     #       host:  testdb.io
     #       port: 7777
@@ -112,9 +112,9 @@ addons:
           # password:
           #   secret: gitlab-database2
           #   key: PGPASSWORD2
-        appConfig:
-          omniauth:
+        # appConfig:
+        #   omniauth:
             # enabled: true
             # allowSingleSignOn: ['blah']
             # blockAutoCreatedUsers: true
-            autoLinkSamlUser: true
+            # autoLinkSamlUser: true
