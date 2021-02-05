@@ -57,9 +57,6 @@ twistlock:
 addons:
   gitlab:
     enabled: true
-    git:
-      tag: null
-      branch: main
     values:
       postgresql:
         install: true
@@ -69,7 +66,3 @@ addons:
 
   gitlabRunner:
     enabled: true
-    git:
-      tag: null
-      branch: bb-1270/monitoring-logging-integration
-    values: {}
