@@ -1,3 +1,2 @@
 resources:
-  - authservice-config.yaml
   - ingress-cert.yaml
