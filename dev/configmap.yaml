@@ -61,10 +61,4 @@ twistlock:
 
 addons:
   anchore:
-    enabled: false
-    postgresql:
-      external: false
-    enterprise:
-      enabled: true
-    redis:
-      external: false
+    enabled: true
