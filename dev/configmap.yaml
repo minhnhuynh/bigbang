@@ -5,9 +5,6 @@ flux:
   rollback:
     cleanupOnFail: false
 
-clusterAuditor:
-  enabled: false
-
 gatekeeper:
   enabled: false
   values:
