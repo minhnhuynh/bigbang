@@ -61,4 +61,4 @@ twistlock:
 
 addons:
   anchore:
-    enabled: true
+    enabled: false
