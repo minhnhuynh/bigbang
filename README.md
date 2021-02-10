@@ -51,7 +51,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
 
    ```bash
    # Import Big Bang's development key for decrypting existing secrets:
-   curl https://repo1.dso.mil/platform-one/big-bang/umbrella/-/raw/master/hack/bigbang-dev.asc | gpg --import
+   curl https://repo1.dso.mil/platform-one/big-bang/bigbang/-/raw/master/hack/bigbang-dev.asc | gpg --import
 
    # Generate a GPG master key
    # The key fingerprint will be stored in the $fp variable
