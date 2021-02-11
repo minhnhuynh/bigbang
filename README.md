@@ -55,6 +55,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
 
    # Generate a GPG master key
    # The key fingerprint will be stored in the $fp variable
+   # Do not set a passphrase for this key if prompted.  If you do, Flux will not be able to use it to reconcile your encrypted kustomize resources
    fp=`gpg --quick-generate-key bigbang-sops rsa4096 encr | sed -e 's/ *//;2q;d;'`
    gpg --quick-add-key ${fp} rsa4096 encr
 
@@ -97,6 +98,22 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
    ```
 
 ### Deployment
+
+1. Create `private-registry` secret in the flux namespace
+	```bash
+    # Flux is used to sync Git with the the cluster configuration
+	kubectl create namespace flux-system
+
+	docker login registry1.dso.mil
+	if ! kubectl get namespace flux-system > /dev/null 2>&1; then
+	  kubectl create ns flux-system;
+	  if [ $? -ne 0 ]; then echo ERROR: Namespace creation failed!; exit 1; fi
+	fi
+	if kubectl get secret private-registry -n flux-system > /dev/null 2>&1; then
+	  kubectl delete secret private-registry -n flux-system
+	fi
+	kubectl create secret generic private-registry -n flux-system --from-file=.dockerconfigjson=${HOME}/.docker/config.json --type=kubernetes.io/dockerconfigjson
+	```
 
 1. Deploy private key for Big Bang to decrypt secrets
 
