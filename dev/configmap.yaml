@@ -87,20 +87,20 @@ addons:
     #   username: postgres
     #   database: postgres
     #   password: postgres
-    objectstorage:
-      type: minio
-      endpoint: http://minio.minio.svc.cluster.local:9000
-      region: us-west-1
-      accessKey: myaccesskey
-      accessSecret: mysecretkey
-      bucketPrefix: jkrause
     # objectstorage:
-    #   type: s3
-    #   endpoint: https://s3.amazonaws.com
-    #   region: us-gov-west-1
-    #   # accessKey: myaccesskey
-    #   # accessSecret: mysecretkey
-    #   bucketPrefix: kwilder
+    #   type: minio
+    #   endpoint: http://minio.minio.svc.cluster.local:9000
+    #   region: us-west-1
+    #   accessKey: myaccesskey
+    #   accessSecret: mysecretkey
+    #   bucketPrefix: jkrause
+    objectstorage:
+      type: s3
+      endpoint: https://s3.amazonaws.com
+      region: us-gov-west-1
+      # accessKey: myaccesskey
+      # accessSecret: mysecretkey
+      bucketPrefix: kwilder
     # values:
     #   global:
     #     psql:
