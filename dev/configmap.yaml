@@ -94,13 +94,13 @@ addons:
     #   accessKey: myaccesskey
     #   accessSecret: mysecretkey
     #   bucketPrefix: jkrause
-    objectstorage:
-      type: s3
-      endpoint: https://s3.amazonaws.com
-      region: us-gov-west-1
-      # accessKey: myaccesskey
-      # accessSecret: mysecretkey
-      bucketPrefix: kwilder
+    # objectstorage:
+    #   type: s3
+    #   endpoint: https://s3.amazonaws.com
+    #   region: us-gov-west-1
+    #   # accessKey: myaccesskey
+    #   # accessSecret: mysecretkey
+    #   bucketPrefix: kwilder
     # values:
     #   global:
     #     psql:
