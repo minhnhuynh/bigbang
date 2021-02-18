@@ -72,6 +72,10 @@ sso:
   client_secret: ""
 
 addons:
+
+  gitlabRunner:
+    enabled: true
+
   gitlab:
     enabled: true
     hostnames:
