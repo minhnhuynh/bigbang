@@ -1,0 +1,23 @@
+registryCredentials:
+-   registry: ENC[AES256_GCM,data:+f1LwAuPEoloJB8wdAVipwA=,iv:skIAHre0m4Ikh7uia3JFG4X4jCUMAMeT9qibqYP2KO0=,tag:RSwF0J+5+QKyVEzhInGnhg==,type:str]
+    username: ENC[AES256_GCM,data:mGOFq5iUV/20Zaev,iv:oOF4tcS+NUb7qA2C58ULrDO0d9Y02LRsJZ4rNv6esdI=,tag:tPwwXeoKiv1xirZ8Ea55xQ==,type:str]
+    password: ENC[AES256_GCM,data:gMElQvVWjJnj1Kj+irQzVmbx0dKU8B5q9XVbIJEhxqY=,iv:g5PJMluyd4D+FYXB8obExsO/1VxY9KI9satbPG+T22w=,tag://WxZ8Jmw9md7kX3UsroDQ==,type:str]
+    email: ENC[AES256_GCM,data:hV0/aPNtaS4tl5w=,iv:awP2MEWxsSqFPZLtPEEoHs97/61igTrMOaqBMXi8Dj8=,tag:JWwnl4yFjDllea3uO6JoDQ==,type:str]
+-   registry: ENC[AES256_GCM,data:QXxU68w1KQZNMJ4HW0Ntc3w=,iv:y4ctnjmCBecbbvFbwlpJs3cmZKOuR4JPRSvbXXo8Bag=,tag:gbw3t5Okq4N3cvu1hBnStA==,type:str]
+    username: ENC[AES256_GCM,data:fIIw5uyAvlMVDrYb,iv:UTFjc9BDxHoWD5cqn2Gq01rzrgtM7t/3ETDB1oE8ciU=,tag:pq4KEOAgoBgkklV3sG43gA==,type:str]
+    password: ENC[AES256_GCM,data:sMMNxGjSfT+Ze65Vac9Bi0y4RKeMhkpPR/1HR/a6HYc=,iv:QSOpIVvNzIljrNdH/EOP6W4ot35xJiYB7yEqdqGh0WQ=,tag:CjQWTU3xOze3oO0ns2pdiw==,type:str]
+    email: ENC[AES256_GCM,data:bvIkHAOenzQKa8Y=,iv:nZb4y9/heFYsPdpkKW9Xz4niurnspZM+7YB7Y/r/39c=,tag:AVPxciaggbf3PVkwgZJzNw==,type:str]
+sops:
+    kms:
+    -   arn: arn:aws-us-gov:kms:us-gov-west-1:927962728993:key/f131e19c-a804-4185-b75f-69b995eb9e6a
+        created_at: '2021-02-19T01:06:32Z'
+        enc: AQICAHiBokhIqRyovOZILp3cL4ZLeOMUIKZsOV08m7PNyQevrgE8LVFabmUwZp2b0FsCHrYDAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMKHSynUWHALCZi+8HAgEQgDulF+7BCDfg7ZLMnkd9uP5mh7Sx9LIcO8Ip4WKZEZ2yc1vUCxVWwW96c/QRfCOtkZZ7PZmArj3vTk3hNw==
+        aws_profile: ""
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    lastmodified: '2021-02-19T01:06:32Z'
+    mac: ENC[AES256_GCM,data:cK/0WrvgnGSreNxmiarcXzKwkXCDLN5JjzGJxfCcn6Oc0mJfKny84C3H0w66lk8kFm4RNvWoR0/AiTKDkp1z4hRCDGZzQoG8GZdvIyIUf5GjBK28ZpNmIye/v+Szs2ZUBnwb0Iy2cMEcj13kmiklWYvZtiBGxK1YoZ8uXptiNBc=,iv:NSsovdgp2qX7x1U++VPbM8QU5GHOlwQOOIoodELuvRI=,tag:WBAIt+AjdFTQvfKizOofIg==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.6.1
