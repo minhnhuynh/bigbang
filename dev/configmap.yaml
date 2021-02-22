@@ -1,4 +1,4 @@
-hostname: kube.pro
+hostname: kommadore.org
 
 flux:
   interval: 1m

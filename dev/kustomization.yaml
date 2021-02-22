@@ -1,5 +1,7 @@
 bases:
 - ../base
+resources:
+- ingress-cert.enc.yaml
 configMapGenerator:
   - name: environment
     behavior: merge
