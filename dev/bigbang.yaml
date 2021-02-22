@@ -11,8 +11,10 @@ metadata:
 spec:
   interval: 1m
   url: https://repo1.dsop.io/platform-one/big-bang/customers/template.git
+  secretRef:
+    name: git-creds
   ref:
-    branch: main
+    branch: egoode
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
