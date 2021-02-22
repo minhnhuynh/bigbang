@@ -1,4 +1,4 @@
-hostname: bigbang.dev
+hostname: kube.pro
 
 flux:
   interval: 1m
@@ -21,7 +21,7 @@ istio:
     ingressGateway:
       serviceAnnotations:
         # Ensure mission apps have internal load balancer only
-        service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+        service.beta.kubernetes.io/aws-load-balancer-internal: "false"
         # Enable cross zone load balancing
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
