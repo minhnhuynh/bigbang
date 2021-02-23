@@ -1,1 +1,3 @@
 hostname: bigbang.dev
+twistlocke:
+  enabled: true
