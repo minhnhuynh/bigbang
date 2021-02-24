@@ -13,6 +13,7 @@ gatekeeper:
     replicas: 1
 
 istio:
+  enabled: true
   values:
     kiali:
       dashboard:
@@ -35,9 +36,19 @@ twistlock:
 addons:
   argocd:
     enabled: true
+  authservice:
+    enabled: true
+    chains:
+      minimal:
+        callback_uri: "https://minimal.bigbang.dev"  
   gitlab:
     enabled: true
     sso:
       enabled: false
   gitlabRunner:
     enabled: true
+  anchore:
+    enabled: true
+  sonarqube:
+    enabled: true
+  
