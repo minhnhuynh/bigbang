@@ -26,7 +26,7 @@ monitoring:
   enabled: false
 
 twistlock:
-  enabled: false
+  enabled: true
   values:
     console:
       persistence:
