@@ -95,13 +95,13 @@ addons:
     #   username: postgres
     #   database: postgres
     #   password: postgres
-    objectStorage:
-      type: minio
-      endpoint: http://minio.minio.svc.cluster.local:9000
-      region: us-west-1
-      accessKey: myaccesskey
-      accessSecret: mysecretkey
-      bucketPrefix: kwilder
+    # objectStorage:
+    #   type: minio
+    #   endpoint: http://minio.minio.svc.cluster.local:9000
+    #   region: us-west-1
+    #   accessKey: myaccesskey
+    #   accessSecret: mysecretkey
+    #   bucketPrefix: kwilder
     # objectStorage:
     #   type: s3
     #   endpoint: https://s3.amazonaws.com
