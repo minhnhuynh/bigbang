@@ -64,6 +64,9 @@ twistlock:
       persistence:
         size: 5Gi
 
+minio:
+  enabled: false
+
 # Gloabl SSO parameters
 sso:
   oidc:
