@@ -110,7 +110,14 @@ addons:
     #   # accessSecret: mysecretkey
     #   bucketPrefix: kwilder
 
+
     # values: 
+    #   nginx-ingress:
+    #     enabled: false
+    #     controller:
+    #       publishService:
+    #         enabled: false
+
     #   global:
     #     pages:
     #       enabled: true
