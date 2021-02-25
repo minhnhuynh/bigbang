@@ -111,12 +111,12 @@ addons:
     #   bucketPrefix: kwilder
 
 
-    # values: 
-    #   nginx-ingress:
-    #     enabled: false
-    #     controller:
-    #       publishService:
-    #         enabled: false
+    values: 
+      nginx-ingress:
+        enabled: false
+        controller:
+          publishService:
+            enabled: false
 
     #   global:
     #     pages:
