@@ -110,10 +110,10 @@ addons:
     #   # accessSecret: mysecretkey
     #   bucketPrefix: kwilder
 
-    values: 
-      global:
-        pages:
-          enabled: true
+    # values: 
+    #   global:
+    #     pages:
+    #       enabled: true
     #     psql:
     #       host:  testdb.io
     #       port: 7777
