@@ -1,7 +1,7 @@
 # When updating the version of BigBang, make sure to update
 #   both the bases reference and the GitRepository reference
 bases:
-- git::https://repo1.dsop.io/platform-one/big-bang/umbrella.git//base?ref=minio-cleanup
+- git::https://repo1.dsop.io/platform-one/big-bang/umbrella.git//base?ref=master
 resources:
 - ingress-cert.enc.yaml
 configMapGenerator:
@@ -19,4 +19,4 @@ patchesStrategicMerge:
   spec:
     ref:
       $patch: replace
-      branch: minio-cleanup
+      branch: master
