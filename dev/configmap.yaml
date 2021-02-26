@@ -65,9 +65,9 @@ fluentbit:
   enabled: true
 
 addons:
-  miniooperator:
+  minioOperator:
     enabled: true
-  minioinstance:
+  minio:
     enabled: true
     name: lynnio
     virtualService:
