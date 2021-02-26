@@ -64,10 +64,13 @@ eckoperator:
 fluentbit:
   enabled: true
 
-#addons:
-#  minioinstance:
-#    name: lynnio
-#    virtualService:
-#      enabled: true
-#      name: myminio
+addons:
+  miniooperator:
+    enabled: true
+  minioinstance:
+    enabled: true
+    name: lynnio
+    virtualService:
+      enabled: true
+      name: myminio
 
