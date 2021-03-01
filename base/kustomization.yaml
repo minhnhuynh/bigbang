@@ -1,7 +1,7 @@
 # When updating the version of BigBang, make sure to update
 #   both the bases reference and the GitRepository reference
 bases:
-- git::https://repo1.dsop.io/platform-one/big-bang/bigbang.git//base?ref=master
+- git::https://repo1.dsop.io/platform-one/big-bang/bigbang.git//base?ref=release-1.2
 
 configMapGenerator:
   - name: common
@@ -19,4 +19,4 @@ patchesStrategicMerge:
   spec:
     ref:
       $patch: replace
-      branch: master
+      branch: release-1.2
