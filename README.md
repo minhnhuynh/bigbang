@@ -22,7 +22,7 @@ The main benefits of this template include:
 
 To deploy Big Bang, the following items are required:
 
-- Kubernetes cluster
+- Kubernetes cluster [ready for Big Bang](https://repo1.dso.mil/platform-one/big-bang/bigbang/-/blob/master/docs/d_prerequisites.md)
 - A git repo for your configuration
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - [GPG](https://gnupg.org/index.html)
