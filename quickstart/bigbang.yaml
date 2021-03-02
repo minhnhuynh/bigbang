@@ -10,7 +10,7 @@ metadata:
   namespace: bigbang
 spec:
   interval: 1m
-  url: https://repo1.dsop.io/platform-one/big-bang/customers/template.git
+  url: https://repo1.dso.mil/platform-one/big-bang/customers/template.git
   ref:
     branch: ent-collab-quickstart
 ---

@@ -1,9 +1,0 @@
-bases:
-- ../base
-configMapGenerator:
-  - name: environment
-    behavior: merge
-    files:
-      - values.yaml=configmap.yaml
-patchesStrategicMerge:
-- secrets.enc.yaml
