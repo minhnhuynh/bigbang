@@ -129,6 +129,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
 
    # Test deployment by opening a browser to "kiali.bigbang.dev" to get to the Kiali application deployed by Istio.
    # Note that the owner of "bigbang.dev" has setup the domain to point to 127.0.0.1 for this type of testing.
+   # If you are deployed on a remote host you will need to point "kiali.bigbang.dev" to your cluster master node via your /etc/hosts file
    ```
 
 You now have successfully deployed the quickstart Big Bang.  Your next step is to customize the configuration.  To show you how this is done, let's enable Twistlock.
