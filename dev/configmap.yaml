@@ -73,6 +73,6 @@ addons:
     virtualService:
       enabled: true
       name: myminio
-    accesskey: lynnio
-    secretkey: lynnpassword
+#    accesskey: lynnio
+#    secretkey: lynnpassword
 
