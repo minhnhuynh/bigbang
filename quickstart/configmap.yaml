@@ -20,7 +20,7 @@ istio:
           strategy: anonymous
 
 logging:
-  enabled: false
+  enabled: true
 
 monitoring:
   enabled: true
