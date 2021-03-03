@@ -1,4 +1,4 @@
-hostname: bigbang.dev
+hostname: ent-collab.dso.mil
 
 flux:
   interval: 1m
