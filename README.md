@@ -76,7 +76,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
    # Save secrets into Git
    # Configuration changes must be stored in Git to take affect
    # Note that your secrets are encrypted
-   git add secrets.enc.yaml ../.sops.yaml
+   git add secrets.enc.yaml ingress-certmenc.yaml ../.sops.yaml
    git commit -m "test(quickstart): updated encryption keys"
    git push
    ```
