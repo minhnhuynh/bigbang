@@ -75,9 +75,8 @@ addons:
       name: myminio
     accesskey: lynnio
     secretkey: lynnpassword
-    values: {
+    values:
       service:
         NameOverride: lynn-svc-override
-    }
 
 
