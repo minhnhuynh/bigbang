@@ -21,8 +21,12 @@ istio:
         auth:
           strategy: anonymous
 
+    ingressGateway:
+      type: LoadBalancer
+
     extraIngressGateways:
     - name: mtls-ingressgateway
+      type: LoadBalancer
       k8s:
         hpaSpec:
           minReplicas: 1
