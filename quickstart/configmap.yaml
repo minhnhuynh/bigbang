@@ -13,6 +13,8 @@ gatekeeper:
     replicas: 1
 
 istio:
+  git:
+    tag: "1.7.3-bb.10"
   values:
     kiali:
       dashboard:
