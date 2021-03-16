@@ -1,9 +1,10 @@
 # When updating the version of BigBang, make sure to update
 #   both the bases reference and the GitRepository reference
 bases:
-- https://repo1.dsop.io/platform-one/big-bang/bigbang.git//base?ref=1.0.6
+- https://repo1.dsop.io/platform-one/big-bang/bigbang.git//base?ref=1.2.0
 resources:
 - ingress-cert.enc.yaml
+- ingress-mtls-cert.enc.yaml
 configMapGenerator:
   - name: common
     behavior: merge
@@ -19,4 +20,4 @@ patchesStrategicMerge:
   spec:
     ref:
       $patch: replace
-      semver: "1.0.6"
+      semver: "1.2.0"
