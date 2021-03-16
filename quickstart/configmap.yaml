@@ -19,6 +19,17 @@ istio:
         auth:
           strategy: anonymous
 
+    extraIngressGateways:
+    - name: mtls-ingressgateway
+      k8s:
+        hpaSpec:
+          minReplicas: 1
+          maxReplicas: 3
+        serviceAnnotations:
+          service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+      labels:
+        app: mtls-ingressgateway
+
 logging:
   enabled: false
 
