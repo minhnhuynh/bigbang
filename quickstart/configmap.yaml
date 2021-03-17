@@ -46,6 +46,13 @@ logging:
             cpu: 1
             memory: 3Gi
 
+fluentbit:
+  enabled: true
+  git:
+    repo: "https://repo1.dso.mil/platform-one/big-bang/apps/core/fluentbit.git"
+    ref: jvb-issue-20
+    path: "./chart"
+
 monitoring:
   enabled: true
 
@@ -56,6 +63,3 @@ twistlock:
       persistence:
         size: 5Gi
 
-fluentbit:
-  git:
-    ref: jvb-issue-20
