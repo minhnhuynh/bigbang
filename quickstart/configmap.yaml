@@ -48,10 +48,9 @@ logging:
 
 fluentbit:
   enabled: true
-  git:
-    repo: "https://repo1.dso.mil/platform-one/big-bang/apps/core/fluentbit.git"
-    ref: jvb-issue-20
-    path: "./chart"
+  git.repo: "https://repo1.dso.mil/platform-one/big-bang/apps/core/fluentbit.git"
+  git.ref: jvb-issue-20
+  git.path: "./chart"
 
 monitoring:
   enabled: true
