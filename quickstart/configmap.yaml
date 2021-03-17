@@ -18,15 +18,39 @@ istio:
       dashboard:
         auth:
           strategy: anonymous
+    ingressGateway:
+      serviceAnnotations:
+        # Ensure mission apps have internal load balancer only
+        service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+        # Enable cross zone load balancing
+        service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
-  enabled: false
+  enabled: true
+  values:
+    elasticsearch:
+      master:
+        count: 1
+        persistence:
+          size: 5Gi
+        resources:
+          limits:
+            cpu: 1
+            memory: 3Gi
+      data:
+        count: 1
+        persistence:
+          size: 5Gi
+        resources:
+          limits:
+            cpu: 1
+            memory: 3Gi
 
 monitoring:
-  enabled: false
+  enabled: true
 
 twistlock:
-  enabled: false
+  enabled: true
   values:
     console:
       persistence:
