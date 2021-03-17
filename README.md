@@ -110,6 +110,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
    
    ```bash
    # Create a secret flux is expecting to access IronBank
+   kubectl create namespace flux-system
    kubectl create secret docker-registry private-registry --docker-server=registry1.dso.mil --docker-username=<Your IronBank Username> --docker-password=<Your IronBank Personal Access Token> --docker-email=<Your E-mail Address> -n flux-system
    ```
 
@@ -117,7 +118,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
 
    ```bash
    # Flux is used to sync Git with the the cluster configuration
-   kubectl create namespace flux-system
+   
    curl https://repo1.dso.mil/platform-one/big-bang/bigbang/-/raw/master/scripts/deploy/flux.yaml | kubectl apply -f -
 
    # Wait for flux to complete
