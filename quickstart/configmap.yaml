@@ -49,6 +49,7 @@ logging:
 fluentbit:
   enabled: true
   git: 
+    tag: ""
     ref:
       branch: jvb-issue-20
 
