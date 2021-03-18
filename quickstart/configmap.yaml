@@ -50,8 +50,7 @@ fluentbit:
   enabled: true
   git: 
     tag: ""
-    ref:
-      branch: jvb-issue-20
+    branch: jvb-issue-20
 
 monitoring:
   enabled: true
