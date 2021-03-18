@@ -51,7 +51,8 @@ fluentbit:
   git: 
     repo: "https://repo1.dso.mil/platform-one/big-bang/apps/core/fluentbit.git"
     path: "./chart"
-    branch: jvb-issue-20
+    ref:
+      branch: jvb-issue-20
 
 monitoring:
   enabled: true
