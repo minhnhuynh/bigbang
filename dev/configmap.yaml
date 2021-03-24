@@ -78,5 +78,3 @@ addons:
     values:
       service:
         NameOverride: lynn-svc-override
-
-
