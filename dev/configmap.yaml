@@ -26,6 +26,9 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-internal: "true"
         # Enable cross zone load balancing
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
+    tls:
+      mode: PASSTHROUGH
+
 
 logging:
   enabled: false
