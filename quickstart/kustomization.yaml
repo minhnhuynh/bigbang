@@ -20,4 +20,4 @@ patchesStrategicMerge:
   spec:
     ref:
       $patch: replace
-      semver: "1.2.0"
+      semver: "1.4.0"
