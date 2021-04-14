@@ -6,7 +6,7 @@ flux:
     cleanupOnFail: false
 
 clusterAuditor:
-  enabled: false
+  enabled: true
 
 gatekeeper:
   values:
