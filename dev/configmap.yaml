@@ -75,9 +75,10 @@ addons:
       nameOverride: lynnio
       service:
         NameOverride: lynn-svc-override
-      virtualService:
-        enabled: true
-        name: myminio
-        hosts:
+      istio:
+        virtualService:
+          enabled: true
+          name: myminio
+          hosts:
           - differentname.bigbang.dev
 
