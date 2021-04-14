@@ -69,12 +69,14 @@ addons:
     enabled: true
   minio:
     enabled: true
-    name: lynnio
-    virtualService:
-      enabled: true
-      name: myminio
     accesskey: lynnio
     secretkey: lynnpassword
     values:
+      nameOverride: lynnio
       service:
         NameOverride: lynn-svc-override
+#    virtualService:
+#      enabled: true
+#      name: myminio
+#    values:
+
