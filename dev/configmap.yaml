@@ -6,10 +6,10 @@ flux:
     cleanupOnFail: false
 
 clusterAuditor:
-  enabled: false
+  enabled: true
 
 gatekeeper:
-  enabled: false
+  enabled: true
   values:
     replicas: 1
 
@@ -27,7 +27,7 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 
 logging:
-  enabled: false
+  enabled: true
   values:
     elasticsearch:
       master:
@@ -48,10 +48,10 @@ logging:
             memory: 3Gi
 
 monitoring:
-  enabled: false
+  enabled: true
 
 twistlock:
-  enabled: false
+  enabled: true
   values:
     console:
       persistence:
@@ -59,7 +59,7 @@ twistlock:
 
 
 eckoperator:
-  enabled: false
+  enabled: true
 
 fluentbit:
   enabled: true
