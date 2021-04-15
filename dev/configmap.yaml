@@ -69,16 +69,16 @@ addons:
     enabled: true
   minio:
     enabled: true
-    accesskey: lynnio
-    secretkey: lynnpassword
-    values:
-      nameOverride: lynnio
-      service:
-        nameOverride: lynn-svc-override
-      istio:
-        virtualService:
-          enabled: true
-          name: myminio
-          hosts:
-          - differentname.bigbang.dev
+#    accesskey: lynnio
+#    secretkey: lynnpassword
+#    values:
+#      nameOverride: lynnio
+#      service:
+#        nameOverride: lynn-svc-override
+#      istio:
+#        virtualService:
+#          enabled: true
+#          name: myminio
+#          hosts:
+#          - differentname.bigbang.dev
 
