@@ -74,7 +74,7 @@ addons:
     values:
       nameOverride: lynnio
       service:
-        NameOverride: lynn-svc-override
+        nameOverride: lynn-svc-override
       istio:
         virtualService:
           enabled: true
