@@ -162,7 +162,7 @@ minio:
 sso:
   oidc:
     # host: keycloak.bigbang.dev
-    host: keycloak.bigbang.dev
+    host: login.dso.mil
     realm: baby-yoda
   client_secret: ""
 
