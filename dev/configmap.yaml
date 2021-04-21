@@ -64,7 +64,8 @@ eckoperator:
 fluentbit:
   enabled: false
 
-addon  minioOperator:
+addon:
+  minioOperator:
     enabled: true
   minio:
     enabled: false
