@@ -64,11 +64,10 @@ eckoperator:
 fluentbit:
   enabled: true
 
-addons:
-  minioOperator:
+addon  minioOperator:
     enabled: true
   minio:
-    enabled: true
+    enabled: false
 #    accesskey: lynnio
 #    secretkey: lynnpassword
 #    values:
