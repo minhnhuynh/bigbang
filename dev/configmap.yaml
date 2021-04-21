@@ -15,6 +15,97 @@ gatekeeper:
 
 istio:
   enabled: true
+  ingress:
+    # for keycloak work  *.admin.bigbang.dev
+    # key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC8bJtY3qQC0udg\nWInp1K81Canpzsd/22mQ9f8GjVNF/7DhCSXRdHNeLtDNeJ2JoH96d1vLAm1YmHJ3\n1aBwVULM0cWPRDkRg2Wjl/sMFoLgxR1ZKdtq3xxC2fwiDXjwv9JyOQgOrQqFxP7B\nQab1fv9uDfHP1aIxcDN7CpOxJHrjMoxyiPRynNFvw/iiGDJ+Jvomt8opWb4mC2jZ\nMK5WGLvYWj9mkUo9crnQVJBNgU/ebx3j+yWztD6PDnuTNptI3x6OySjbkYlBGhjK\nMpfQ7mTPCr5pBEgcJFVXVROg8Bum15vn3Uv+4LNe1tHcDxwCJQQJrzGNNc5YMpn8\n1rvltDOTAgMBAAECggEACINbrXM5s8r1mzvE12S9mcba/25RQyyVo3AJ2rDt7z6z\nLiespr79K2cwFeh6Laqrt8vGwPBWImeY3GMxgYHIp9pec6+gaHMoV3DZbd1igmdF\ngS7L9BMqgra4lo1HRpFUH8cF3yvgStTwsaiWs4bOYZmNsFc1ocgw+0EqFRnR14vw\nQ6pxlNlR0wND4WwEQ+PEFuGyaZpcnDA38vwaNyIVl99pRXXojvfco7dacYyce40o\nO02mtl2yME4ssCgYPcThonPaUDjF594q7J2kqVRp6mJ0J9lvsxPRZ3NC1tOfVgzI\nE/YVeNx7S9r0ONTJFLfRidd+udBKBCUM7NcKygqk8QKBgQDiQc0LPe7NWzfZ5Ks2\nIeZZ1S7CX/Eyv7VW90YhOUTF9g9PmmH1v539vp9xdHlo9YaF2dXuf1GsMgpNQ4IZ\nNuz5xwvvmma3demqtOawTpHj3vHpZWOYTL0SEb5XwyPaZZIb33wxDidT8/0CpwPt\nTlq6GQ8HPYupHT6cJQcb7PgAmQKBgQDVMZ+0WucFAKeJSEj1zDZA0EzUqiFfLCpP\ngko9+9yhPvl7Q6c+oOV0brx0ny+racLUsV0m8vzvvLFxHTubPa7CMKf5s7c3EPQv\n8GqovlsvgzchwxRRs0KQMhQSZw1X2UDSBDci0AwZRXrJQp3odJk+0Pq5MslfCF6s\nfwWxV6C1CwKBgBSvv3ePqg3MkUayyZShdNYxz5yl+P+S15mj8h2HhuoynSPCEcLO\nSjuw+hL9ezxFdo82Y4Dy0xzTVm3KBlMX2oLb2BOIImwTs9GPyKfGB0C2WZflVT3P\nhlnolWagyN5m+vzhahFyIdZjMHbVnl5ME6+AKweWcPZ9XgQYvpWnDOXBAoGBAL0I\nmTEUAQ+geuzxGTBI+DoT+GwAxkJbKNEDF81KC2E2M4Qmgp63j3zjy1ok4+G7jzOE\naLJmdfwkdbl0UCvgT5qEBg0UWvoKoFn5dLlWwAeq8zGOhe/DYNv2a3G9ykkAq8cM\nUc8eZfvqbWsTFGzPJipaplWcQI1xIHEW1/ddWXPtAoGBAInFXBnVDJiZkhq1adt9\n3S/YVoMigw6ZD4j7E5g/5QBCs2rnZex20YFuJDvf+HAD/3eohJ6n75QRSZc0sn9j\nXO49WKI7Qd2XTEL6dGvxGyFRTqrC5dUd3v/wq4XjUz1bI6VTvvHvf7EPCGh1NJ8v\nPcJzvO/HdugGAG1xWnN7HT4g\n-----END PRIVATE KEY-----"
+    # cert: "-----BEGIN CERTIFICATE-----\nMIIFLDCCBBSgAwIBAgISA87F5ACBGZuzPeSeGr2wqcY8MA0GCSqGSIb3DQEBCwUA\nMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD\nEwJSMzAeFw0yMTA0MTQxNDIzMTRaFw0yMTA3MTMxNDIzMTRaMB4xHDAaBgNVBAMM\nEyouYWRtaW4uYmlnYmFuZy5kZXYwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\nAoIBAQC8bJtY3qQC0udgWInp1K81Canpzsd/22mQ9f8GjVNF/7DhCSXRdHNeLtDN\neJ2JoH96d1vLAm1YmHJ31aBwVULM0cWPRDkRg2Wjl/sMFoLgxR1ZKdtq3xxC2fwi\nDXjwv9JyOQgOrQqFxP7BQab1fv9uDfHP1aIxcDN7CpOxJHrjMoxyiPRynNFvw/ii\nGDJ+Jvomt8opWb4mC2jZMK5WGLvYWj9mkUo9crnQVJBNgU/ebx3j+yWztD6PDnuT\nNptI3x6OySjbkYlBGhjKMpfQ7mTPCr5pBEgcJFVXVROg8Bum15vn3Uv+4LNe1tHc\nDxwCJQQJrzGNNc5YMpn81rvltDOTAgMBAAGjggJOMIICSjAOBgNVHQ8BAf8EBAMC\nBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAw\nHQYDVR0OBBYEFLp8IoeSyLzb/tJ57pxDqGX4t/4nMB8GA1UdIwQYMBaAFBQusxe3\nWFbLrlAJQOYfr52LFMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0\ncDovL3IzLm8ubGVuY3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5j\nci5vcmcvMB4GA1UdEQQXMBWCEyouYWRtaW4uYmlnYmFuZy5kZXYwTAYDVR0gBEUw\nQzAIBgZngQwBAgEwNwYLKwYBBAGC3xMBAQEwKDAmBggrBgEFBQcCARYaaHR0cDov\nL2Nwcy5sZXRzZW5jcnlwdC5vcmcwggEEBgorBgEEAdZ5AgQCBIH1BIHyAPAAdgCU\nILwejtWNbIhzH4KLIiwN0dpNXmxPlD1h204vWE2iwgAAAXjQ+rZ5AAAEAwBHMEUC\nIQCOtTENOPlAwvmnqNxm9LHWo1TkNpLZqdCQWffa3zc2sAIgVpNs+pLLUmJfwq0+\nFRSQJB9FyrH7js53BSZ1WyfY6GwAdgB9PvL4j/+IVWgkwsDKnlKJeSvFDngJfy5q\nl2iZfiLw1wAAAXjQ+razAAAEAwBHMEUCIQDCliAyo7EV92Kmp5zeoVfeqklvPPYi\np43KG/yc6gbiBwIgHpQYiQ5MCcJHnnol3Ku35ZYJw8jcWy7aW2S9gHR3eeUwDQYJ\nKoZIhvcNAQELBQADggEBACUBLIHwOvyAsXlRGxqDKBGcl8BmbelWgp+XXsf9MZd0\nhYYrPlnQL95C5R78FXmYlG24J4uHLMTvz+gYe/WRv4Cjr8It+EaoGATZ8zGa2OlY\nFTfx6dLk/h2KPF9N45o5rsUtlTlTfJYGz58p30XefLwOdIrez8UtEV2fWevAWwYw\nZGLvPczwDABye0OUou+M+BoZQOI6hrcQ3IXGlf/VQKzBp1dOOxZB7bx3mOzg1CI6\n1AebDLxybOev4Ke25jbtst6i4HG1feFXm4yL1utNsn15uBVoQVfKeLVvMO3Y2Hyi\nDZvLATJX4qq0e2wDcETc8fxshOUnYhpzrbUctVBBncA=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEZTCCA02gAwIBAgIQQAF1BIMUpMghjISpDBbN3zANBgkqhkiG9w0BAQsFADA/\nMSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT\nDkRTVCBSb290IENBIFgzMB4XDTIwMTAwNzE5MjE0MFoXDTIxMDkyOTE5MjE0MFow\nMjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUxldCdzIEVuY3J5cHQxCzAJBgNVBAMT\nAlIzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuwIVKMz2oJTTDxLs\njVWSw/iC8ZmmekKIp10mqrUrucVMsa+Oa/l1yKPXD0eUFFU1V4yeqKI5GfWCPEKp\nTm71O8Mu243AsFzzWTjn7c9p8FoLG77AlCQlh/o3cbMT5xys4Zvv2+Q7RVJFlqnB\nU840yFLuta7tj95gcOKlVKu2bQ6XpUA0ayvTvGbrZjR8+muLj1cpmfgwF126cm/7\ngcWt0oZYPRfH5wm78Sv3htzB2nFd1EbjzK0lwYi8YGd1ZrPxGPeiXOZT/zqItkel\n/xMY6pgJdz+dU/nPAeX1pnAXFK9jpP+Zs5Od3FOnBv5IhR2haa4ldbsTzFID9e1R\noYvbFQIDAQABo4IBaDCCAWQwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8E\nBAMCAYYwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5p\nZGVudHJ1c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTE\np7Gkeyxx+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEE\nAYLfEwEBATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2Vu\nY3J5cHQub3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0\nLmNvbS9EU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYf\nr52LFMLGMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjANBgkqhkiG9w0B\nAQsFAAOCAQEA2UzgyfWEiDcx27sT4rP8i2tiEmxYt0l+PAK3qB8oYevO4C5z70kH\nejWEHx2taPDY/laBL21/WKZuNTYQHHPD5b1tXgHXbnL7KqC401dk5VvCadTQsvd8\nS8MXjohyc9z9/G2948kLjmE6Flh9dDYrVYA9x2O+hEPGOaEOa1eePynBgPayvUfL\nqjBstzLhWVQLGAkXXmNs+5ZnPBxzDJOLxhF2JIbeQAcH5H0tZrUlo5ZYyOqA7s9p\nO5b85o3AM/OJ+CktFBQtfvBhcJVd9wvlwPsk+uyOy2HI7mNxKKgsBTt375teA2Tw\nUdHkhVNcsAKX1H7GNNLOEADksd86wuoXvg==\n-----END CERTIFICATE-----"
+      # key: |
+      #   -----BEGIN PRIVATE KEY-----
+      #   MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDl7oIecDHRb8XB
+      #   jG4sEW1qsBlI94oIa50KTHWOet7mhW82BX+scWVgqI3PbIVUI144IgKGPSq3SEki
+      #   gP0zNgSlxNjZZ/UaB99HXlK5kZ87puDvoOYMBiurjq/QzgwygiN9NyyqdUtWdc/V
+      #   94owxS47HsclhnOEXscVOjSQI/PIGM5G8UXZyeV0yvGVvrUYNbMfz9Mhh3rD2ihw
+      #   6LQVgX710J7q3IOiC1CDCt0wXur1w18LYs+R1Yu07AM7R5EoEEFB2TZhYgDZ3+v7
+      #   lvv/EINyVc5FfolIhyV1VG+dZxevHFiuZQ5cNLpiLwep3QreKeNk1ijBhAehRnTM
+      #   a8fB+mb9AgMBAAECggEAS7KiE/NL82+g43+gJdH2+9DOAj+8qdkD8ogJi8bX63yy
+      #   iE53IgaTIadcSJWpr3GVa1WHDzrD/WNG8J0Wvu1hylFsMucOwmslDxH2mjFfAvyF
+      #   wV5vXjYJ2ok3SL8NNPOzS14GznefPe+7ZO4CCNxhxAT1+1ywWzv4vvxSocG0WINy
+      #   QwbY53vl7/fyJzmkiDUuqRqtVKR/SCvVFyV/Mzb9XwLVVOzme7zMbK9EwlR7XxwH
+      #   NtjZS2t/DbFUh+O9lj28fuV4qVo83jGWE63P4bEvOXzFC5zu+kpEmQEP5X1UGqqp
+      #   h1NBPG0oeP17hv0jVzc703dbnBzif58Sc4DFraQ94QKBgQD81+IquSpmW1epJdNu
+      #   AGAalvPS0JWWjjBrn+sC0JA+7QWGJrGAN8FtZrx/Eu58ovuD3Yra86ilWALWJKQj
+      #   vaEg/xbrZixbQoap6MI4XYK6hqEY2Og28K4MqQXtvQB5NrjnDdYY7cICStJ8WMGs
+      #   KV0MKzHGsUbvTBRQGXaFXHDSlwKBgQDozWWIHZ+fO0Rd/nG8M+kRY3HmIFLyxZ7C
+      #   YZ5pgEn+X4xNi3lghkBMXAx50BB+as158lPrdHLTpkeYbcWg7xfcn2C4V+mKuUDo
+      #   aAX8TeqbIy/Wc67HxM0+ujRkwNNIqZJhLrE34SGBDzj9jDv+sLAjglAzIbK3vtLR
+      #   nP5DRQ1JiwKBgFd7Djp/9GaTxgG1H7EYmie5AMV4+7iqm6AxJWvE45OSCG5A5vsY
+      #   z2jduewxjag778/RECDvWvNSPzD+XngrPRughrqNkF1G6DbTXJeJ6xhESmrBaZ7Q
+      #   qTeiJ3X5BbfqshDnXaMkaBLI9oilYOUDLrluHHvFjGhxJzoLhVFhCXwjAoGBALmM
+      #   9C7gRZh5eY1dPzOdQFeepmqgOtzLDDWr7sHyAYfgighIcW6wslDqUPtKDctkvu9C
+      #   aQbS4q606n2giJMz3hX3ZfSoBTmPXB+gwZyOUb5i9j78J0OMJXaonRfs5LoWhdg1
+      #   igSayMR/6JGWEz91fn5e4CNQ6YwwaQGvGq1tPSDvAoGBAMH7yzcNoPlTGF7tIHuf
+      #   xvFGCnnrS+UFWm6JaFCaNmKCr1FqRqa0seQmRl0FrnwXH3Q9/KpepBlcMjxhI1aF
+      #   ZtXMjqYq3Fe6V8QAx0HxbbAlyzeOnK5xmKfzV0YXSHH5GjvK99zKT6s8Gu1jxu4I
+      #   vfkczrrBlKbNp5wxPgjcAZd7
+      #   -----END PRIVATE KEY-----
+      # cert: |
+      #   -----BEGIN CERTIFICATE-----
+      #   MIIFMzCCBBugAwIBAgISA/bfQH5Vgy3KTu3PXxiNHed8MA0GCSqGSIb3DQEBCwUA
+      #   MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+      #   EwJSMzAeFw0yMTA0MTYwMTA1MTNaFw0yMTA3MTUwMTA1MTNaMBgxFjAUBgNVBAMM
+      #   DSouYmlnYmFuZy5kZXYwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDl
+      #   7oIecDHRb8XBjG4sEW1qsBlI94oIa50KTHWOet7mhW82BX+scWVgqI3PbIVUI144
+      #   IgKGPSq3SEkigP0zNgSlxNjZZ/UaB99HXlK5kZ87puDvoOYMBiurjq/QzgwygiN9
+      #   NyyqdUtWdc/V94owxS47HsclhnOEXscVOjSQI/PIGM5G8UXZyeV0yvGVvrUYNbMf
+      #   z9Mhh3rD2ihw6LQVgX710J7q3IOiC1CDCt0wXur1w18LYs+R1Yu07AM7R5EoEEFB
+      #   2TZhYgDZ3+v7lvv/EINyVc5FfolIhyV1VG+dZxevHFiuZQ5cNLpiLwep3QreKeNk
+      #   1ijBhAehRnTMa8fB+mb9AgMBAAGjggJbMIICVzAOBgNVHQ8BAf8EBAMCBaAwHQYD
+      #   VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0O
+      #   BBYEFAqYpSC/aq86VGg0Pj+AJL8Jq4opMB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJ
+      #   QOYfr52LFMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3Iz
+      #   Lm8ubGVuY3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcv
+      #   MCsGA1UdEQQkMCKCDSouYmlnYmFuZy5kZXaCESouZGV2LmJpZ2JhbmcuZGV2MEwG
+      #   A1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEW
+      #   Gmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB
+      #   8gDwAHUAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAF42GzRXAAA
+      #   BAMARjBEAiBC9SJzpBUmMfpTTflKasVUMCOVEH/yQHLez9OijeyLEQIgJ29qt+mt
+      #   Cwhds52p8Fn8d4DQ05X1YGe83w//nJG76hwAdwD2XJQv0XcwIhRUGAgwlFaO400T
+      #   GTO/3wwvIAvMTvFk4wAAAXjYbNHPAAAEAwBIMEYCIQDBtSlv2u3Sz3bTOKQAzsmS
+      #   +u79PjtpvTnHfp7SwqGTAAIhAOJL7dr9pJt9JRKBl4E7Vu79xU7xOux1LIUVE+kA
+      #   dR1qMA0GCSqGSIb3DQEBCwUAA4IBAQBQK76kZJwa1zNv2k2h/u5isvcQiDL8eoUd
+      #   idIdXy7ydIbhzYl9Vh+zDGkUwxvIP4jVjD4FBC4QqQTjqutw8sLWjbzSPJLVfYLV
+      #   TmwtkbCvhTiE3PAdT+SmoOFIUsd2LEmjFJ622DyUaNH0OsdrHKClC/KIO0NvhTQs
+      #   ZnN89eH1wreIL9DolXko3RgkGB1LbG9MH4/dvzTnKHoBo4EUFXoJcnSiK7rdHEXI
+      #   u7wKFjw9OJnqjCLx7SGOIyhLo4c5UtJXU8uxKmxsO63WGZG+ZB38uzuRZaEEt+zs
+      #   SolSteEEHHXbe/BjYfufW2BXdJwqi3gaw04j+8Q4hcntH2cM28TW
+      #   -----END CERTIFICATE-----
+      #   -----BEGIN CERTIFICATE-----
+      #   MIIEZTCCA02gAwIBAgIQQAF1BIMUpMghjISpDBbN3zANBgkqhkiG9w0BAQsFADA/
+      #   MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT
+      #   DkRTVCBSb290IENBIFgzMB4XDTIwMTAwNzE5MjE0MFoXDTIxMDkyOTE5MjE0MFow
+      #   MjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUxldCdzIEVuY3J5cHQxCzAJBgNVBAMT
+      #   AlIzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuwIVKMz2oJTTDxLs
+      #   jVWSw/iC8ZmmekKIp10mqrUrucVMsa+Oa/l1yKPXD0eUFFU1V4yeqKI5GfWCPEKp
+      #   Tm71O8Mu243AsFzzWTjn7c9p8FoLG77AlCQlh/o3cbMT5xys4Zvv2+Q7RVJFlqnB
+      #   U840yFLuta7tj95gcOKlVKu2bQ6XpUA0ayvTvGbrZjR8+muLj1cpmfgwF126cm/7
+      #   gcWt0oZYPRfH5wm78Sv3htzB2nFd1EbjzK0lwYi8YGd1ZrPxGPeiXOZT/zqItkel
+      #   /xMY6pgJdz+dU/nPAeX1pnAXFK9jpP+Zs5Od3FOnBv5IhR2haa4ldbsTzFID9e1R
+      #   oYvbFQIDAQABo4IBaDCCAWQwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8E
+      #   BAMCAYYwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5p
+      #   ZGVudHJ1c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTE
+      #   p7Gkeyxx+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEE
+      #   AYLfEwEBATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2Vu
+      #   Y3J5cHQub3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0
+      #   LmNvbS9EU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYf
+      #   r52LFMLGMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjANBgkqhkiG9w0B
+      #   AQsFAAOCAQEA2UzgyfWEiDcx27sT4rP8i2tiEmxYt0l+PAK3qB8oYevO4C5z70kH
+      #   ejWEHx2taPDY/laBL21/WKZuNTYQHHPD5b1tXgHXbnL7KqC401dk5VvCadTQsvd8
+      #   S8MXjohyc9z9/G2948kLjmE6Flh9dDYrVYA9x2O+hEPGOaEOa1eePynBgPayvUfL
+      #   qjBstzLhWVQLGAkXXmNs+5ZnPBxzDJOLxhF2JIbeQAcH5H0tZrUlo5ZYyOqA7s9p
+      #   O5b85o3AM/OJ+CktFBQtfvBhcJVd9wvlwPsk+uyOy2HI7mNxKKgsBTt375teA2Tw
+      #   UdHkhVNcsAKX1H7GNNLOEADksd86wuoXvg==
+      #   -----END CERTIFICATE-----
+
   values:
     kiali:
       dashboard:
@@ -26,9 +117,6 @@ istio:
         service.beta.kubernetes.io/aws-load-balancer-internal: "true"
         # Enable cross zone load balancing
         service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
-    tls:
-      mode: PASSTHROUGH
-
 
 logging:
   enabled: false
@@ -58,7 +146,7 @@ fluentbit:
   enabled: false
 
 monitoring:
-  enabled: true
+  enabled: false
 
 twistlock:
   enabled: false
@@ -73,17 +161,120 @@ minio:
 # Gloabl SSO parameters
 sso:
   oidc:
-    host: login.dso.mil
+    # host: keycloak.bigbang.dev
+    host: keycloak.bigbang.dev
     realm: baby-yoda
   client_secret: ""
 
+
 addons:
 
-  gitlabRunner:
+  keycloak:
     enabled: false
+    ingress:
+      # *.bigbang.dev
+      key: |
+        -----BEGIN PRIVATE KEY-----
+        MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDl7oIecDHRb8XB
+        jG4sEW1qsBlI94oIa50KTHWOet7mhW82BX+scWVgqI3PbIVUI144IgKGPSq3SEki
+        gP0zNgSlxNjZZ/UaB99HXlK5kZ87puDvoOYMBiurjq/QzgwygiN9NyyqdUtWdc/V
+        94owxS47HsclhnOEXscVOjSQI/PIGM5G8UXZyeV0yvGVvrUYNbMfz9Mhh3rD2ihw
+        6LQVgX710J7q3IOiC1CDCt0wXur1w18LYs+R1Yu07AM7R5EoEEFB2TZhYgDZ3+v7
+        lvv/EINyVc5FfolIhyV1VG+dZxevHFiuZQ5cNLpiLwep3QreKeNk1ijBhAehRnTM
+        a8fB+mb9AgMBAAECggEAS7KiE/NL82+g43+gJdH2+9DOAj+8qdkD8ogJi8bX63yy
+        iE53IgaTIadcSJWpr3GVa1WHDzrD/WNG8J0Wvu1hylFsMucOwmslDxH2mjFfAvyF
+        wV5vXjYJ2ok3SL8NNPOzS14GznefPe+7ZO4CCNxhxAT1+1ywWzv4vvxSocG0WINy
+        QwbY53vl7/fyJzmkiDUuqRqtVKR/SCvVFyV/Mzb9XwLVVOzme7zMbK9EwlR7XxwH
+        NtjZS2t/DbFUh+O9lj28fuV4qVo83jGWE63P4bEvOXzFC5zu+kpEmQEP5X1UGqqp
+        h1NBPG0oeP17hv0jVzc703dbnBzif58Sc4DFraQ94QKBgQD81+IquSpmW1epJdNu
+        AGAalvPS0JWWjjBrn+sC0JA+7QWGJrGAN8FtZrx/Eu58ovuD3Yra86ilWALWJKQj
+        vaEg/xbrZixbQoap6MI4XYK6hqEY2Og28K4MqQXtvQB5NrjnDdYY7cICStJ8WMGs
+        KV0MKzHGsUbvTBRQGXaFXHDSlwKBgQDozWWIHZ+fO0Rd/nG8M+kRY3HmIFLyxZ7C
+        YZ5pgEn+X4xNi3lghkBMXAx50BB+as158lPrdHLTpkeYbcWg7xfcn2C4V+mKuUDo
+        aAX8TeqbIy/Wc67HxM0+ujRkwNNIqZJhLrE34SGBDzj9jDv+sLAjglAzIbK3vtLR
+        nP5DRQ1JiwKBgFd7Djp/9GaTxgG1H7EYmie5AMV4+7iqm6AxJWvE45OSCG5A5vsY
+        z2jduewxjag778/RECDvWvNSPzD+XngrPRughrqNkF1G6DbTXJeJ6xhESmrBaZ7Q
+        qTeiJ3X5BbfqshDnXaMkaBLI9oilYOUDLrluHHvFjGhxJzoLhVFhCXwjAoGBALmM
+        9C7gRZh5eY1dPzOdQFeepmqgOtzLDDWr7sHyAYfgighIcW6wslDqUPtKDctkvu9C
+        aQbS4q606n2giJMz3hX3ZfSoBTmPXB+gwZyOUb5i9j78J0OMJXaonRfs5LoWhdg1
+        igSayMR/6JGWEz91fn5e4CNQ6YwwaQGvGq1tPSDvAoGBAMH7yzcNoPlTGF7tIHuf
+        xvFGCnnrS+UFWm6JaFCaNmKCr1FqRqa0seQmRl0FrnwXH3Q9/KpepBlcMjxhI1aF
+        ZtXMjqYq3Fe6V8QAx0HxbbAlyzeOnK5xmKfzV0YXSHH5GjvK99zKT6s8Gu1jxu4I
+        vfkczrrBlKbNp5wxPgjcAZd7
+        -----END PRIVATE KEY-----
+      cert: |
+        -----BEGIN CERTIFICATE-----
+        MIIFMzCCBBugAwIBAgISA/bfQH5Vgy3KTu3PXxiNHed8MA0GCSqGSIb3DQEBCwUA
+        MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+        EwJSMzAeFw0yMTA0MTYwMTA1MTNaFw0yMTA3MTUwMTA1MTNaMBgxFjAUBgNVBAMM
+        DSouYmlnYmFuZy5kZXYwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDl
+        7oIecDHRb8XBjG4sEW1qsBlI94oIa50KTHWOet7mhW82BX+scWVgqI3PbIVUI144
+        IgKGPSq3SEkigP0zNgSlxNjZZ/UaB99HXlK5kZ87puDvoOYMBiurjq/QzgwygiN9
+        NyyqdUtWdc/V94owxS47HsclhnOEXscVOjSQI/PIGM5G8UXZyeV0yvGVvrUYNbMf
+        z9Mhh3rD2ihw6LQVgX710J7q3IOiC1CDCt0wXur1w18LYs+R1Yu07AM7R5EoEEFB
+        2TZhYgDZ3+v7lvv/EINyVc5FfolIhyV1VG+dZxevHFiuZQ5cNLpiLwep3QreKeNk
+        1ijBhAehRnTMa8fB+mb9AgMBAAGjggJbMIICVzAOBgNVHQ8BAf8EBAMCBaAwHQYD
+        VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0O
+        BBYEFAqYpSC/aq86VGg0Pj+AJL8Jq4opMB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJ
+        QOYfr52LFMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3Iz
+        Lm8ubGVuY3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcv
+        MCsGA1UdEQQkMCKCDSouYmlnYmFuZy5kZXaCESouZGV2LmJpZ2JhbmcuZGV2MEwG
+        A1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEW
+        Gmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB
+        8gDwAHUAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAF42GzRXAAA
+        BAMARjBEAiBC9SJzpBUmMfpTTflKasVUMCOVEH/yQHLez9OijeyLEQIgJ29qt+mt
+        Cwhds52p8Fn8d4DQ05X1YGe83w//nJG76hwAdwD2XJQv0XcwIhRUGAgwlFaO400T
+        GTO/3wwvIAvMTvFk4wAAAXjYbNHPAAAEAwBIMEYCIQDBtSlv2u3Sz3bTOKQAzsmS
+        +u79PjtpvTnHfp7SwqGTAAIhAOJL7dr9pJt9JRKBl4E7Vu79xU7xOux1LIUVE+kA
+        dR1qMA0GCSqGSIb3DQEBCwUAA4IBAQBQK76kZJwa1zNv2k2h/u5isvcQiDL8eoUd
+        idIdXy7ydIbhzYl9Vh+zDGkUwxvIP4jVjD4FBC4QqQTjqutw8sLWjbzSPJLVfYLV
+        TmwtkbCvhTiE3PAdT+SmoOFIUsd2LEmjFJ622DyUaNH0OsdrHKClC/KIO0NvhTQs
+        ZnN89eH1wreIL9DolXko3RgkGB1LbG9MH4/dvzTnKHoBo4EUFXoJcnSiK7rdHEXI
+        u7wKFjw9OJnqjCLx7SGOIyhLo4c5UtJXU8uxKmxsO63WGZG+ZB38uzuRZaEEt+zs
+        SolSteEEHHXbe/BjYfufW2BXdJwqi3gaw04j+8Q4hcntH2cM28TW
+        -----END CERTIFICATE-----
+        -----BEGIN CERTIFICATE-----
+        MIIEZTCCA02gAwIBAgIQQAF1BIMUpMghjISpDBbN3zANBgkqhkiG9w0BAQsFADA/
+        MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT
+        DkRTVCBSb290IENBIFgzMB4XDTIwMTAwNzE5MjE0MFoXDTIxMDkyOTE5MjE0MFow
+        MjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUxldCdzIEVuY3J5cHQxCzAJBgNVBAMT
+        AlIzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuwIVKMz2oJTTDxLs
+        jVWSw/iC8ZmmekKIp10mqrUrucVMsa+Oa/l1yKPXD0eUFFU1V4yeqKI5GfWCPEKp
+        Tm71O8Mu243AsFzzWTjn7c9p8FoLG77AlCQlh/o3cbMT5xys4Zvv2+Q7RVJFlqnB
+        U840yFLuta7tj95gcOKlVKu2bQ6XpUA0ayvTvGbrZjR8+muLj1cpmfgwF126cm/7
+        gcWt0oZYPRfH5wm78Sv3htzB2nFd1EbjzK0lwYi8YGd1ZrPxGPeiXOZT/zqItkel
+        /xMY6pgJdz+dU/nPAeX1pnAXFK9jpP+Zs5Od3FOnBv5IhR2haa4ldbsTzFID9e1R
+        oYvbFQIDAQABo4IBaDCCAWQwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8E
+        BAMCAYYwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5p
+        ZGVudHJ1c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTE
+        p7Gkeyxx+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEE
+        AYLfEwEBATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2Vu
+        Y3J5cHQub3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0
+        LmNvbS9EU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYf
+        r52LFMLGMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjANBgkqhkiG9w0B
+        AQsFAAOCAQEA2UzgyfWEiDcx27sT4rP8i2tiEmxYt0l+PAK3qB8oYevO4C5z70kH
+        ejWEHx2taPDY/laBL21/WKZuNTYQHHPD5b1tXgHXbnL7KqC401dk5VvCadTQsvd8
+        S8MXjohyc9z9/G2948kLjmE6Flh9dDYrVYA9x2O+hEPGOaEOa1eePynBgPayvUfL
+        qjBstzLhWVQLGAkXXmNs+5ZnPBxzDJOLxhF2JIbeQAcH5H0tZrUlo5ZYyOqA7s9p
+        O5b85o3AM/OJ+CktFBQtfvBhcJVd9wvlwPsk+uyOy2HI7mNxKKgsBTt375teA2Tw
+        UdHkhVNcsAKX1H7GNNLOEADksd86wuoXvg==
+        -----END CERTIFICATE-----
+
+    # database:
+    #   host: postgres-postgresql-headless.postgres.svc.cluster.local 
+    #   type: postgres
+    #   port:  5432
+    #   database: postgres
+    #   username: postgres
+    #   password: postgres
+    values:
+      replicas: 1
+
+  gitlabRunner:
+    enabled: true
 
   gitlab:
-    enabled: false
+    enabled: true
     hostnames:
       gitlab: gitlab.bigbang.dev
       registry: registry.bigbang.dev
@@ -112,35 +303,3 @@ addons:
     #   # accessKey: myaccesskey
     #   # accessSecret: mysecretkey
     #   bucketPrefix: kwilder
-
-    # mattermostoperator:
-    #   enabled: true
-    
-    # mattermost:
-    #   enabled: true
-    #   sso:
-    #     enabled: true
-    #     client_id: "platform1_a8604cc9-f5e9-4656-802d-d05624370245_bb8-mattermost"
-    #     client_secret: "no-secret"
-    #     auth_endpoint: "https://login.dso.mil/oauth/authorize"
-    #     token_endpoint: "https://login.dso.mil/oauth/token"
-    #     user_api_endpoint: "https://login.dso.mil/api/v4/user"
-
-    # values: 
-    #   global:
-    #     pages:
-    #       enabled: true
-    #     psql:
-    #       host:  testdb.io
-    #       port: 7777
-    #       username: postgres2
-    #       database: postgres2
-          # password:
-          #   secret: gitlab-database2
-          #   key: PGPASSWORD2
-        # appConfig:
-        #   omniauth:
-            # enabled: true
-            # allowSingleSignOn: ['blah']
-            # blockAutoCreatedUsers: true
-            # autoLinkSamlUser: true
