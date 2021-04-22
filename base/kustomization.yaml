@@ -1,7 +1,11 @@
 # When updating the version of BigBang, make sure to update
 #   both the bases reference and the GitRepository reference
 bases:
+<<<<<<< HEAD
 - git::https://repo1.dsop.io/platform-one/big-bang/umbrella.git//base?ref=minio-operator4.0
+=======
+- git::https://repo1.dsop.io/platform-one/big-bang/bigbang.git//base?ref=1.5.0
+>>>>>>> main
 resources:
 - ingress-cert.enc.yaml
 configMapGenerator:

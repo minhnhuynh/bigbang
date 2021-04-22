@@ -1,5 +1,8 @@
 # BigBang Template
 
+#### _This is a mirror of a government repo hosted on [Repo1](https://repo1.dso.mil/) by [DoD Platform One](http://p1.dso.mil/).  Please direct all code changes, issues and comments to https://repo1.dso.mil/platform-one/big-bang/customers/template_
+
+
 This folder contains a template that you can replicate in your own Git repo to get started with Big Bang configuration.
 
 The main benefits of this template include:
@@ -22,7 +25,7 @@ The main benefits of this template include:
 
 To deploy Big Bang, the following items are required:
 
-- Kuberntes cluster
+- Kubernetes cluster [ready for Big Bang](https://repo1.dso.mil/platform-one/big-bang/bigbang/-/blob/master/docs/d_prerequisites.md)
 - A git repo for your configuration
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - [GPG](https://gnupg.org/index.html)
@@ -76,7 +79,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
    # Save secrets into Git
    # Configuration changes must be stored in Git to take affect
    # Note that your secrets are encrypted
-   git add secrets.enc.yaml ../.sops.yaml
+   git add secrets.enc.yaml ingress-cert.enc.yaml ../.sops.yaml
    git commit -m "test(quickstart): updated encryption keys"
    git push
    ```
@@ -106,12 +109,19 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
    gpg --export-secret-key --armor ${fp} | kubectl create secret generic sops-gpg -n bigbang --from-file=bigbangkey=/dev/stdin
    ```
 
+1. Create imagePullSecrets for flux
+   
+   ```bash
+   # Create a secret flux is expecting to access IronBank
+   kubectl create namespace flux-system
+   kubectl create secret docker-registry private-registry --docker-server=registry1.dso.mil --docker-username=<Your IronBank Username> --docker-password=<Your IronBank Personal Access Token> --docker-email=<Your E-mail Address> -n flux-system
+   ```
+
 1. Deploy flux to handle syncing
 
    ```bash
    # Flux is used to sync Git with the the cluster configuration
-   kubectl create namespace flux-system
-   curl https://repo1.dso.mil/platform-one/big-bang/umbrella/-/raw/master/scripts/deploy/flux.yaml | kubectl apply -f -
+   curl https://repo1.dso.mil/platform-one/big-bang/bigbang/-/raw/master/scripts/deploy/flux.yaml | kubectl apply -f -
 
    # Wait for flux to complete
    kubectl get deploy -o name -n flux-system | xargs -n1 -t kubectl rollout status -n flux-system
@@ -129,6 +139,7 @@ The `quickstart` folder contains a simplistic Big Bang deployment to help you de
 
    # Test deployment by opening a browser to "kiali.bigbang.dev" to get to the Kiali application deployed by Istio.
    # Note that the owner of "bigbang.dev" has setup the domain to point to 127.0.0.1 for this type of testing.
+   # If you are deployed on a remote host you will need to point "kiali.bigbang.dev" to your cluster master node via your /etc/hosts file
    ```
 
 You now have successfully deployed the quickstart Big Bang.  Your next step is to customize the configuration.  To show you how this is done, let's enable Twistlock.
@@ -176,7 +187,7 @@ The shared default BigBang release can be modified by updating the following in 
 
   ```yaml
   bases:
-  - https://repo1.dsop.io/platform-one/big-bang/umbrella.git/base/?ref=v1.0.6
+  - https://repo1.dsop.io/platform-one/big-bang/bigbang.git/base/?ref=v1.0.6
   ```
 
 - Reference for the Big Bang helm release:
@@ -198,7 +209,7 @@ It is recommended that you track Big Bang releases using the version.  However, 
 
 ### Environment
 
-For each environment, the following are the minimum required steps to fully configure Big Bang.  For additional configuration options, refer to the [Big Bang](https://repo1.dsop.io/platform-one/big-bang/umbrella) and [Big Bang Package](https://repo1.dsop.io/platform-one/big-bang/apps) documentation.
+For each environment, the following are the minimum required steps to fully configure Big Bang.  For additional configuration options, refer to the [Big Bang](https://repo1.dsop.io/platform-one/big-bang/bigbang) and [Big Bang Package](https://repo1.dsop.io/platform-one/big-bang/apps) documentation.
 
 1. In `bigbang.yaml`
    - Update the `GitRepository` resource with your deployment's Git repository and branch.
@@ -245,8 +256,8 @@ Prequisites:
 - [Secrets Operations (SOPS)](https://github.com/mozilla/sops)
 - [GNU Privacy Guard (GPG)](https://gnupg.org/index.html) to decode existing secret.
 
-1. Big Bang uses [SOPS](https://github.com/mozilla/sops) to store encrypted secrets in Git.  In order for Big Bang to decrypt and deploy the serets, your private key must be stored securly and access configuration must be put in place.  Refer to the [Big Bang](https://repo1.dsop.io/platform-one/big-bang/umbrella) documentation for details on how to do this.
-1. Import the [Big Bang development private key](https://repo1.dsop.io/platform-one/big-bang/umbrella/-/blob/master/hack/bigbang-dev.asc) using `gpg --import bigbang-dev.asc`
+1. Big Bang uses [SOPS](https://github.com/mozilla/sops) to store encrypted secrets in Git.  In order for Big Bang to decrypt and deploy the serets, your private key must be stored securly and access configuration must be put in place.  Refer to the [Big Bang](https://repo1.dsop.io/platform-one/big-bang/bigbang) documentation for details on how to do this.
+1. Import the [Big Bang development private key](https://repo1.dsop.io/platform-one/big-bang/bigbang/-/blob/master/hack/bigbang-dev.asc) using `gpg --import bigbang-dev.asc`
    > This key is only intended to be used to demonstrate the use of SOPS.  It is NOT a secure key and should NOT be used in production in any manner.
 1. `.sops.yaml` holds the key fingerpints used for SOPS.  When you setup your encryption keys in step 1, you should have updated this file for the key management you are using.  If not, [setup .sops.yaml](https://github.com/mozilla/sops#210using-sopsyaml-conf-to-select-kmspgp-for-new-files) now.
    > The `.sops.yaml` can be setup to have different keys for `dev`, `prod` and other environments.  In this case it is important to have a `path_regex` setup for `base` that holds all keys for all environments so that secrets there can be shared.  There is an excellent tutorial on how to do this [here](https://dev.to/stack-labs/manage-your-secrets-in-git-with-sops-common-operations-118g).
@@ -329,13 +340,13 @@ Big Bang follows a [GitOps](https://www.weave.works/blog/what-is-gitops-really) 
    watch kubectl get po,hr,kustomizations -A
    ```
 
-   For troubleshooting, refer to the [Big Bang](https://repo1.dsop.io/platform-one/big-bang/umbrella) documentation.
+   For troubleshooting, refer to the [Big Bang](https://repo1.dsop.io/platform-one/big-bang/bigbang) documentation.
 
 ## Updates
 
 It is likely that you will want to make changes to the `dev` environment first and then propagate to other environments.  You can add changes to the `dev` folder without affecting other environments.  And, you can override settings in the `base` folder within the `dev` configuration using [Kustomize patching](https://kubectl.docs.kubernetes.io/references/kustomize/patches/).
 
 After making your configuration changes for `dev`, make sure to modify the appropriate Git reference for the branch, tag, or semver you are testing.  Upon pushing the changes to Git, Big Bang will automatically reconcile the configuration.
-   > It may take Big Bang up to 10 minutes to recognize your changes and start to deploy them.  This is based on the interval set for polling.  You can force Big Bang to recheck by running the [sync.sh](https://repo1.dsop.io/platform-one/big-bang/umbrella/-/blob/master/hack/sync.sh) script.
+   > It may take Big Bang up to 10 minutes to recognize your changes and start to deploy them.  This is based on the interval set for polling.  You can force Big Bang to recheck by running the [sync.sh](https://repo1.dsop.io/platform-one/big-bang/bigbang/-/blob/master/hack/sync.sh) script.
 
 Once you have tested in one environment, you can repeat the above steps for each additional environment you want to test.  When you are ready to deploy to production, you can modify settings in the `base` directory and remove overrides from the specific environments.
