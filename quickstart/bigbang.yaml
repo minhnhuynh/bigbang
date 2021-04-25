@@ -10,7 +10,7 @@ metadata:
   namespace: bigbang
 spec:
   interval: 1m
-  url: https://repo1.dsop.io/platform-one/big-bang/customers/template.git
+  url: https://github.com/minhnhuynh/bigbang.git
   ref:
     branch: main
 ---

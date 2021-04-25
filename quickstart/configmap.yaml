@@ -20,7 +20,25 @@ istio:
           strategy: anonymous
 
 logging:
-  enabled: false
+  enabled: true
+  values:
+    elasticsearch:
+      master:
+        count: 1
+        persistence:
+          size: 5Gi
+        resources:
+          limits:
+            cpu: 1
+            memory: 3Gi
+      data:
+        count: 1
+        persistence:
+          size: 5Gi
+        resources:
+          limits:
+            cpu: 1
+            memory: 3Gi
 
 monitoring:
   enabled: true
