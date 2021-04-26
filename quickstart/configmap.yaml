@@ -6,7 +6,7 @@ flux:
     cleanupOnFail: false
 
 clusterAuditor:
-  enabled: true
+  enabled: false
 
 gatekeeper:
   values:
@@ -20,7 +20,7 @@ istio:
           strategy: anonymous
 
 logging:
-  enabled: true
+  enabled: false
   values:
     elasticsearch:
       master:
@@ -41,10 +41,10 @@ logging:
             memory: 3Gi
 
 monitoring:
-  enabled: true
+  enabled: false
 
 twistlock:
-  enabled: true
+  enabled: false
   values:
     console:
       persistence:
