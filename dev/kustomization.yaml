@@ -7,7 +7,7 @@ configMapGenerator:
       - values.yaml=configmap.yaml
 patchesStrategicMerge:
 ## Enable the line below if a secrets.enc.yaml is created in this directory
-  - secrets.enc.yaml
+#  - secrets.enc.yaml
 - |-
   apiVersion: source.toolkit.fluxcd.io/v1beta1
   kind: GitRepository
