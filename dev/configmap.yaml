@@ -19,7 +19,7 @@ eckoperator:
   enabled: false
 
 monitoring:
-  enabled: false
+  enabled: true
   values:
     prometheus:
       prometheusSpec:
@@ -66,3 +66,7 @@ twistlock:
     console:
       persistence:
         size: 256Mi
+
+clusterAuditor:
+  # -- Toggle deployment of Cluster Auditor.
+  enabled: false
