@@ -47,6 +47,14 @@ gatekeeper:
         requests:
           cpu: 200m
           memory: 256Mi
+    violations:
+      allowedDockerRegistries:
+        parameters:
+          repos:
+            - registry1.dso.mil
+            - registry.dso.mil
+            - quay.io
+            - docker.io
 
 kyverno:
   values:
