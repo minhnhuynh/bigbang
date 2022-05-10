@@ -19,7 +19,7 @@ eckoperator:
   enabled: false
 
 monitoring:
-  enabled: true
+  enabled: false
   values:
     prometheus:
       prometheusSpec:
