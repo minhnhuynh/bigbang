@@ -48,6 +48,13 @@ gatekeeper:
           cpu: 200m
           memory: 256Mi
     violations:
+      someConstraint:
+        match:
+          excludedNamespaces:
+          - monitoring
+          - kiali
+          - jaeger
+          - gitlab
       allowedDockerRegistries:
         parameters:
           repos:
