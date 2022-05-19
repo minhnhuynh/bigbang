@@ -48,7 +48,7 @@ gatekeeper:
           cpu: 200m
           memory: 256Mi
     violations:
-      someConstraint:
+      hostNetworking:
         match:
           excludedNamespaces:
           - monitoring
