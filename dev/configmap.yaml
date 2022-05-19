@@ -55,6 +55,7 @@ gatekeeper:
           - kiali
           - jaeger
           - gitlab
+          - metallb-system
       allowedDockerRegistries:
         parameters:
           repos:
