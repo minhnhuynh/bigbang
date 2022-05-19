@@ -35,6 +35,7 @@ fluentbit:
       privileged: true
 
 gatekeeper:
+  enabled: false
   values:
     replicas: 1
     controllerManager:
@@ -51,10 +52,6 @@ gatekeeper:
       hostNetworking:
         match:
           excludedNamespaces:
-          - monitoring
-          - kiali
-          - jaeger
-          - gitlab
           - metallb-system
       allowedDockerRegistries:
         parameters:
@@ -77,4 +74,4 @@ twistlock:
 
 clusterAuditor:
   # -- Toggle deployment of Cluster Auditor.
-  enabled: true
+  enabled: false
