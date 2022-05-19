@@ -35,7 +35,7 @@ fluentbit:
       privileged: true
 
 gatekeeper:
-  enabled: false
+  enabled: true
   values:
     replicas: 1
     controllerManager:
@@ -74,4 +74,4 @@ twistlock:
 
 clusterAuditor:
   # -- Toggle deployment of Cluster Auditor.
-  enabled: false
+  enabled: true
