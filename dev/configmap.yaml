@@ -75,3 +75,7 @@ twistlock:
 clusterAuditor:
   # -- Toggle deployment of Cluster Auditor.
   enabled: true
+
+addons:
+  argocd:
+    enabled: true
