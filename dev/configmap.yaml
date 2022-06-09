@@ -78,4 +78,4 @@ clusterAuditor:
 
 addons:
   argocd:
-    enabled: false
+    enabled: true
