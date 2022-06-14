@@ -13,10 +13,12 @@ flux:
     cleanupOnFail: false
 
 logging:
-  enabled: false
+  enabled: true
+  license:
+    trial: false
 
 eckoperator:
-  enabled: false
+  enabled: true
 
 monitoring:
   enabled: true
