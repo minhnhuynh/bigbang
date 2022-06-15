@@ -37,7 +37,7 @@ fluentbit:
       privileged: true
 
 gatekeeper:
-  enabled: true
+  enabled: false
   values:
     replicas: 1
     controllerManager:
@@ -76,7 +76,7 @@ twistlock:
 
 clusterAuditor:
   # -- Toggle deployment of Cluster Auditor.
-  enabled: true
+  enabled: false
 
 addons:
   argocd:
