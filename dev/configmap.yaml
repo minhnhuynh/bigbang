@@ -80,7 +80,7 @@ clusterAuditor:
 
 addons:
   argocd:
-    enabled: true
+    enabled: false
     values:
       configs:
         clusterCredentials:
