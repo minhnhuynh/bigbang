@@ -68,7 +68,7 @@ kyverno:
     replicaCount: 1
 
 twistlock:
-  enabled: true
+  enabled: false
   values:
     console:
       persistence:
@@ -80,7 +80,7 @@ clusterAuditor:
 
 addons:
   argocd:
-    enabled: false
+    enabled: true
     values:
       configs:
         clusterCredentials:
