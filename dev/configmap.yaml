@@ -21,7 +21,7 @@ eckoperator:
   enabled: true
 
 monitoring:
-  enabled: true
+  enabled: false
   values:
     prometheus:
       prometheusSpec:
