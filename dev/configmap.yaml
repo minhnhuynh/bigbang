@@ -78,10 +78,9 @@ clusterAuditor:
   # -- Toggle deployment of Cluster Auditor.
   enabled: false
 
-vault:
-  enabled: true
-
 addons:
+  vault:
+    enabled: true
   argocd:
     enabled: true
     values:
