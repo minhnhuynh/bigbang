@@ -103,4 +103,40 @@ addons:
           persistence:
             enabled: false
 
-                
+  mattermostoperator:
+    enabled: true
+    postRenderers:
+      - kustomize:
+          patchesJson6902:
+            - target:
+                kind: GitRepository
+                version: v1
+                name: mattermost-operator
+              patch:
+                - op: add
+                  path: /metadata/labels/k8s.twr.io~1imageswap
+                  value: enabled
+  mattermost:
+    enabled: true
+    postRenderers:
+      - kustomize:
+          patchesJson6902:
+            - target:
+                kind: GitRepository
+                version: v1
+                name: mattermost
+              patch:
+                - op: add
+                  path: /metadata/labels/k8s.twr.io~1imageswap
+                  value: enabled
+         #    
+         # patchesJson6902:
+         #   - target:
+         #       version: v1
+         #       kind: Namespace
+         #       name: nexus
+         #     patch:
+         #       - op: add
+         #         path: /metadata/labels
+         #         value:
+         #           k8s.twr.io/imageswap: enabled
