@@ -7,6 +7,21 @@ domain: sandbox.local
 #       type: "NodePort"
 #       nodePortBase: 30000
 
+istio:
+  enabled: true
+  ingressGateways:
+    passthrough-ingressgateway:
+      type: "LoadBalancer"
+  gateways:
+    passthrough:
+      ingressGateway: "passthrough-ingressgateway"
+      hosts:
+        - "*.sandbox.local"
+      tls:
+        mode: "PASSTHROUGH"
+  keycloak:
+    enabled: true
+
 flux:
   interval: 1m
   rollback:
@@ -106,9 +121,6 @@ addons:
   keycloak:
     enabled: true
     ingress:
-      gateway: "public"
+      gateway: "passthrough"
     values:
-      image:
-        repository: registry1.dso.mil/ironbank/opensource/keycloak/keycloak
-        tag: "16.1.1"
-
+      replicas: 1
