@@ -124,3 +124,19 @@ addons:
       gateway: "passthrough"
     values:
       replicas: 1
+      secrets:
+        env:
+          stringData:
+            X509_CA_BUNDLE: "/etc/x509/https/cas.pem"
+        certauthority:
+          stringData:
+            cas.pem: '{{ .Files.Get "resources/dev/dod_cas.pem" }}'
+      extraVolumes: |-              
+        - name: certauthority
+          secret:
+            secretName: {{ include "keycloak.fullname" . }}-certauthority
+      extraVolumeMounts: |-
+        - name: certauthority
+          mountPath: /etc/x509/https/cas.pem
+          subPath: cas.pem
+          readOnly: true
