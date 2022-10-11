@@ -1,1 +1,142 @@
-hostname: bigbang.dso.mil
+domain: sandbox.local
+
+# Uncomment the following settings if using the AWS RKE2 terraform setup
+# istio:
+#   ingressGateways:
+#     public-ingressgateway:
+#       type: "NodePort"
+#       nodePortBase: 30000
+
+istio:
+  enabled: true
+  ingressGateways:
+    passthrough-ingressgateway:
+      type: "LoadBalancer"
+  gateways:
+    passthrough:
+      ingressGateway: "passthrough-ingressgateway"
+      hosts:
+        - "*.sandbox.local"
+      tls:
+        mode: "PASSTHROUGH"
+  keycloak:
+    enabled: true
+
+flux:
+  interval: 1m
+  rollback:
+    cleanupOnFail: false
+
+logging:
+  enabled: false
+  license:
+    trial: false
+
+eckoperator:
+  enabled: false
+
+monitoring:
+  enabled: false
+  values:
+    prometheus:
+      prometheusSpec:
+        resources:
+          requests:
+            cpu: 200m
+            memory: 1Gi
+
+fluentbit:
+  enabled: false
+  values:
+    securityContext:
+      privileged: true
+
+gatekeeper:
+  enabled: false
+  values:
+    replicas: 1
+    controllerManager:
+      resources:
+        requests:
+          cpu: 100m
+          memory: 256Mi
+    audit:
+      resources:
+        requests:
+          cpu: 200m
+          memory: 256Mi
+    violations:
+      hostNetworking:
+        match:
+          excludedNamespaces:
+          - metallb-system
+      allowedDockerRegistries:
+        parameters:
+          repos:
+            - registry1.dso.mil
+            - registry.dso.mil
+            - quay.io
+            - docker.io
+
+kyverno:
+  values:
+    replicaCount: 1
+
+twistlock:
+  enabled: false
+  values:
+    console:
+      persistence:
+        size: 256Mi
+
+clusterAuditor:
+  # -- Toggle deployment of Cluster Auditor.
+  enabled: false
+
+addons:
+  vault:
+    enabled: true
+  argocd:
+    enabled: false
+    values:
+      configs:
+        clusterCredentials:
+          - name: sandbox-test
+            server: https://192.168.50.207:6443
+            config:
+              tlsClientConfig:
+                insecure: false
+                caData: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJlVENDQVIrZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWtNU0l3SUFZRFZRUUREQmx5YTJVeUxYTmwKY25abGNpMWpZVUF4TmpVek9UVXdNRFF6TUI0WERUSXlNRFV6TURJeU16UXdNMW9YRFRNeU1EVXlOekl5TXpRdwpNMW93SkRFaU1DQUdBMVVFQXd3WmNtdGxNaTF6WlhKMlpYSXRZMkZBTVRZMU16azFNREEwTXpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJIUnhjeGh3NUhvZEVhOG9CbldzK044N2xwUjFTd3EveUoxM3hsWHAKODloQlB1blJaTyt1TmRWREs4T0luK0JFeWRrVk1KNGZzUWlyKytWUjkvNmJSenlqUWpCQU1BNEdBMVVkRHdFQgovd1FFQXdJQ3BEQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01CMEdBMVVkRGdRV0JCVEZaUitOaDN5QldrYzBGK1d2CmpkY0xrS050TlRBS0JnZ3Foa2pPUFFRREFnTklBREJGQWlFQTcrdy9OdDAyTVoxMjZEVlVPbVBXMllIS0NESWwKZmZQcHJ1SnJ5WVVwUGFnQ0lIaEs0c2VQOTBPd0JDNURmbW1SK2ljdHhLVEljL01QTlRGT09wanVmbDVYCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+                certData: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJrVENDQVRpZ0F3SUJBZ0lJVmYyQWZMNzZMekF3Q2dZSUtvWkl6ajBFQXdJd0pERWlNQ0FHQTFVRUF3d1oKY210bE1pMWpiR2xsYm5RdFkyRkFNVFkxTXprMU1EQTBNekFlRncweU1qQTFNekF5TWpNME1ETmFGdzB5TXpBMQpNekF5TWpNME1ETmFNREF4RnpBVkJnTlZCQW9URG5ONWMzUmxiVHB0WVhOMFpYSnpNUlV3RXdZRFZRUURFd3h6CmVYTjBaVzA2WVdSdGFXNHdXVEFUQmdjcWhrak9QUUlCQmdncWhrak9QUU1CQndOQ0FBUVFkME8xZHlBMklLU28KN0lNL1p2VGlkc09UNFJQUEtaWUJiOFFuNTlpODdOcmozeFY2Y2QrSVdmZWc3RWRzY0N4YmxaQkthaklTNjkzdgo2aWxkRXVzUW8wZ3dSakFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUhBd0l3Ckh3WURWUjBqQkJnd0ZvQVVnMHh0RjNQN0RKZUFUZjJoaHVTTHBLVTYrNXd3Q2dZSUtvWkl6ajBFQXdJRFJ3QXcKUkFJZ01QVE84cXFyZE9WOENyaTZtYXhadkNpdUViQTBMZ01aVnNQd1ZiSkNVendDSUZsd1VESHZGcS8xOFltRAo1SytaMW5nQzhrdnVBajkxSzVGQmhqcCtPa3paCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJlVENDQVIrZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWtNU0l3SUFZRFZRUUREQmx5YTJVeUxXTnMKYVdWdWRDMWpZVUF4TmpVek9UVXdNRFF6TUI0WERUSXlNRFV6TURJeU16UXdNMW9YRFRNeU1EVXlOekl5TXpRdwpNMW93SkRFaU1DQUdBMVVFQXd3WmNtdGxNaTFqYkdsbGJuUXRZMkZBTVRZMU16azFNREEwTXpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJIaXRYYjNPWjhjZUkvWHhVakpsU3ZmYXpUN2d1eENUL29IT1YrRE8KZGd1aFB6YTBPRUVmY3hOWUx0ZWVwU2ZNN1gxUVVYbmRZcmVJOURqSU0vZWtjdGFqUWpCQU1BNEdBMVVkRHdFQgovd1FFQXdJQ3BEQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01CMEdBMVVkRGdRV0JCU0RURzBYYy9zTWw0Qk4vYUdHCjVJdWtwVHI3bkRBS0JnZ3Foa2pPUFFRREFnTklBREJGQWlFQXB2YktWQU1NUVBzMFdDL1NpZndXVnpMalJvMTYKSmNCVHliNytuOGQyOFo4Q0lEejlMMjgyS282TmZjMHhxRm5XVWJYVzM3Si9YS09HNkg2ZUp0WTdZQjVsCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+                keyData: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSU55V25wUDhwb0RWeGNZUXdJN3EwcFduR3BGMzBmRXFmV0RGVmMrdlFHNjBvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFRUhkRHRYY2dOaUNrcU95RFAyYjA0bmJEaytFVHp5bVdBVy9FSitmWXZPemE0OThWZW5IZgppRm4zb094SGJIQXNXNVdRU21veUV1dmQ3K29wWFJMckVBPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=
+      redis:
+        master:
+          persistence:
+            enabled: false
+        replica:
+          replicaCount: 1
+          persistence:
+            enabled: false
+
+  keycloak:
+    enabled: true
+    ingress:
+      gateway: "passthrough"
+    values:
+      replicas: 1
+      secrets:
+        env:
+          stringData:
+            X509_CA_BUNDLE: "/etc/x509/https/cas.pem"
+        certauthority:
+          stringData:
+            cas.pem: '{{ .Files.Get "resources/dev/dod_cas.pem" }}'
+      extraVolumes: |-              
+        - name: certauthority
+          secret:
+            secretName: {{ include "keycloak.fullname" . }}-certauthority
+      extraVolumeMounts: |-
+        - name: certauthority
+          mountPath: /etc/x509/https/cas.pem
+          subPath: cas.pem
+          readOnly: true

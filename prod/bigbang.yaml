@@ -9,8 +9,8 @@ metadata:
   name: environment-repo
   namespace: bigbang
 spec:
-  interval: 10m
-  url: https://repo1.dsop.io/platform-one/big-bang/customers/template.git
+  interval: 5m
+  url: https://github.com/minhnhuynh/bigbang.git
   ref:
     branch: main
 ---
@@ -20,7 +20,7 @@ metadata:
   name: environment
   namespace: bigbang
 spec:
-  interval: 10m
+  interval: 5m
   sourceRef:
     kind: GitRepository
     name: environment-repo
