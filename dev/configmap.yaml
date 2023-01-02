@@ -94,6 +94,8 @@ clusterAuditor:
   enabled: false
 
 addons:
+  nexus:
+    enabled: true
   vault:
     enabled: true
   argocd:
