@@ -95,7 +95,7 @@ clusterAuditor:
 
 addons:
   sonarqube:
-    enabled: false
+    enabled: true
     values:
       resources:
         limits:
@@ -110,6 +110,7 @@ addons:
         - name: certs-volume
           secret:
             secretName: certs-secret
+            defaultMode: 0777
         mounts:
         - name: certs-volume
           mountPath: /tmp/custom-certs
