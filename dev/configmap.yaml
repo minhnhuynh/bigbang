@@ -96,17 +96,6 @@ clusterAuditor:
 addons:
   sonarqube:
     enabled: true
-    database:
-      # -- Hostname of a pre-existing PostgreSQL database to use for SonarQube.
-      host: "mypostgres.postgres"
-      # -- Port of a pre-existing PostgreSQL database to use for SonarQube.
-      port: 5432
-      # -- Database name to connect to on host.
-      database: "sonarqube"
-      # -- Username to connect as to external database, the user must have all privileges on the database.
-      username: "postgres"
-      # -- Database password for the username used to connect to the existing database.
-      password: "1qazXSW@"
     values:
       resources:
         limits:
@@ -117,6 +106,15 @@ addons:
           memory: 2.5Gi
       persistence:
         enabled: true
+        volumes:
+        - name: certs-volume
+          secret:
+            secretName: certs-secret
+        mounts:
+        - name: certs-volume
+          mountPath: /tmp/custom-certs
+      # Override JDBC URL
+      jdbcUrlOverride: "jdbc:postgresql://192.168.50.108/postgres?ssl=true&sslmode=verify-ca&sslrootcert=/tmp/custom-certs/server-ca.pem&sslkey=/tmp/custom-certs/client-key.pk8&sslcert=/tmp/custom-certs/client-cert.pem"
       postgresql:
         # Enable to deploy the PostgreSQL chart
         enabled: false
