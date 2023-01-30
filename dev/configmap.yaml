@@ -36,7 +36,7 @@ eckoperator:
   enabled: false
 
 monitoring:
-  enabled: true
+  enabled: false
   values:
     prometheus:
       prometheusSpec:
@@ -94,6 +94,32 @@ clusterAuditor:
   enabled: false
 
 addons:
+  sonarqube:
+    enabled: true
+    database:
+      # -- Hostname of a pre-existing PostgreSQL database to use for SonarQube.
+      host: "mypostgres.postgres"
+      # -- Port of a pre-existing PostgreSQL database to use for SonarQube.
+      port: 5432
+      # -- Database name to connect to on host.
+      database: "sonarqube"
+      # -- Username to connect as to external database, the user must have all privileges on the database.
+      username: "postgres"
+      # -- Database password for the username used to connect to the existing database.
+      password: "1qazXSW@"
+    values:
+      resources:
+        limits:
+          cpu: 300m
+          memory: 4Gi
+        requests:
+          cpu: 300m
+          memory: 2.5Gi
+      persistence:
+        enabled: true
+      postgresql:
+        # Enable to deploy the PostgreSQL chart
+        enabled: false
   nexus:
     enabled: true
     values:
