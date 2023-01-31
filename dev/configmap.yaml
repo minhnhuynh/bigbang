@@ -95,7 +95,7 @@ clusterAuditor:
 
 addons:
   sonarqube:
-    enabled: false
+    enabled: true
     values:
       resources:
         limits:
@@ -119,7 +119,7 @@ addons:
         command: ["/bin/chown","-R","1000:1000", "/tmp/custom-certs"]
         securityContext:
           runAsUser: 0
-          privileged: true
+          allowPrivilegeEscalation: false
         volumeMounts:
         - name: certs-volume
           mountPath: /tmp/custom-certs
