@@ -95,7 +95,7 @@ clusterAuditor:
 
 addons:
   sonarqube:
-    enabled: true
+    enabled: false
     values:
       resources:
         limits:
