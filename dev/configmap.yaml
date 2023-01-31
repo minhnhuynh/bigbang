@@ -114,19 +114,22 @@ addons:
         mounts:
         - name: certs-volume
           mountPath: /tmp/custom-certs
-          readOnly: false
+        - name: certs-tmp
+          mountPath: /tmp
       extraInitContainers:
-      - name: change-custom-certs-ownership
-        image: busybox
-        command: ["/bin/chown","-R","1000:1000", "/tmp/custom-certs"]
+      - name: change-certs-ownership
+        image: alpine:3.6
+        command: ["sh", "-c", "mkdir /tmp/certs && cp /tmp/custom-certs/* /tmp && chown -R 1000:1000 /tmp/certs"]
         securityContext:
           runAsUser: 0
           allowPrivilegeEscalation: false
         volumeMounts:
+        - name: certs-tmp
+          mountPath: /tmp
         - name: certs-volume
           mountPath: /tmp/custom-certs
       # Override JDBC URL
-      jdbcUrlOverride: "jdbc:postgresql://192.168.50.108/postgres?ssl=true&sslmode=verify-ca&sslrootcert=/tmp/custom-certs/server-ca.pem&sslkey=/tmp/custom-certs/client-key.pk8&sslcert=/tmp/custom-certs/client-cert.pem"
+      jdbcUrlOverride: "jdbc:postgresql://192.168.50.108/postgres?ssl=true&sslmode=verify-ca&sslrootcert=/tmp/certs/server-ca.pem&sslkey=/tmp/certs/client-key.pk8&sslcert=/tmp/certs/client-cert.pem"
       postgresql:
         # Enable to deploy the PostgreSQL chart
         enabled: false
