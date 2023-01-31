@@ -114,14 +114,14 @@ addons:
         - name: certs-volume
           mountPath: /tmp/custom-certs
       extraInitContainers:
-      - name: change-ownership-container
+      - name: change-custom-certs-ownership
         image: busybox
         command: ["/bin/chown","-R","1000:1000", "/tmp/custom-certs"]
         securityContext:
           runAsUser: 0
           privileged: true
         volumeMounts:
-        - name: notebook-data
+        - name: certs-volume
           mountPath: /tmp/custom-certs
       # Override JDBC URL
       jdbcUrlOverride: "jdbc:postgresql://192.168.50.108/postgres?ssl=true&sslmode=verify-ca&sslrootcert=/tmp/custom-certs/server-ca.pem&sslkey=/tmp/custom-certs/client-key.pk8&sslcert=/tmp/custom-certs/client-cert.pem"
