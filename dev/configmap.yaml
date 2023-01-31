@@ -111,10 +111,10 @@ addons:
           secret:
             secretName: certs-secret
             defaultMode: 0777
-            readOnly: false
         mounts:
         - name: certs-volume
           mountPath: /tmp/custom-certs
+          readOnly: false
       extraInitContainers:
       - name: change-custom-certs-ownership
         image: busybox
