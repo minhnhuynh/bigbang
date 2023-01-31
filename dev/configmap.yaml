@@ -95,7 +95,7 @@ clusterAuditor:
 
 addons:
   sonarqube:
-    enabled: false
+    enabled: true
     values:
       resources:
         limits:
@@ -113,7 +113,7 @@ addons:
             defaultMode: 0777
         mounts:
         - name: certs-volume
-          mountPath: /tmp/custom-certs
+          mountPath: /opt/sonarqube/temp/tmp/custom-certs
       # Override JDBC URL
       jdbcUrlOverride: "jdbc:postgresql://192.168.50.108/postgres?ssl=true&sslmode=verify-ca&sslrootcert=/tmp/custom-certs/server-ca.pem&sslkey=/tmp/custom-certs/client-key.pk8&sslcert=/tmp/custom-certs/client-cert.pem"
       postgresql:
