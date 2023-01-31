@@ -107,6 +107,9 @@ addons:
       persistence:
         enabled: true
         volumes:
+        - name: certs-tmp
+          emptyDir:
+            sizeLimit: "32k"
         - name: certs-volume
           secret:
             secretName: certs-secret
