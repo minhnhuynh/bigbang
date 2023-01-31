@@ -122,7 +122,7 @@ addons:
       extraInitContainers:
       - name: change-certs-ownership
         image: alpine:3.6
-        command: ["sh", "-c", "cp /tmp/custom-certs/* /tmp && chown -R 1000:1000 /tmp/certs"]
+        command: ["sh", "-c", "cp /tmp/custom-certs/* /tmp/certs && chown -R 1000:1000 /tmp/certs"]
         securityContext:
           runAsUser: 0
           allowPrivilegeEscalation: false
