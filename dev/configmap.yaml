@@ -95,7 +95,7 @@ clusterAuditor:
 
 addons:
   sonarqube:
-    enabled: true
+    enabled: false
     values:
       resources:
         limits:
@@ -113,7 +113,6 @@ addons:
         - name: certs-volume
           secret:
             secretName: certs-secret
-            defaultMode: 0777
         mounts:
         - name: certs-volume
           mountPath: /tmp/custom-certs
@@ -122,7 +121,7 @@ addons:
       extraInitContainers:
       - name: change-certs-ownership
         image: alpine:3.6
-        command: ["sh", "-c", "cp /tmp/custom-certs/* /tmp/certs && chown -R 1000:1000 /tmp/certs && chmod 0600 /tmp/certs/client-key.pk8"]
+        command: ["sh", "-c", "cp /tmp/custom-certs/* /tmp/certs && chown -R 1000:1000 /tmp/certs]
         securityContext:
           runAsUser: 0
           allowPrivilegeEscalation: false
