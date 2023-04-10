@@ -94,46 +94,46 @@ clusterAuditor:
   enabled: false
 
 addons:
-  sonarqube:
-    enabled: true
-    values:
-      resources:
-        limits:
-          cpu: 300m
-          memory: 4Gi
-        requests:
-          cpu: 300m
-          memory: 2.5Gi
-      persistence:
-        enabled: true
-        volumes:
-        - name: certs-tmp
-          emptyDir:
-            sizeLimit: "32k"
-        - name: certs-volume
-          secret:
-            secretName: certs-secret
-        mounts:
-        - name: certs-volume
-          mountPath: /tmp/custom-certs
-        - name: certs-tmp
-          mountPath: /tmp/certs
-      extraInitContainers:
-      - name: change-certs-ownership
-        image: alpine:3.6
-        command: ["sh", "-c", "cp /tmp/custom-certs/* /tmp/certs && chown -R 1000:1000 /tmp/certs]
-        securityContext:
-          runAsUser: 0
-          allowPrivilegeEscalation: false
-        volumeMounts:
-        - name: certs-tmp
-          mountPath: /tmp/certs
-        - name: certs-volume
-          mountPath: /tmp/custom-certs
-      jdbcUrlOverride: "jdbc:postgresql://192.168.50.108/postgres?ssl=true&sslmode=verify-ca&sslrootcert=/tmp/certs/server-ca.pem&sslkey=/tmp/certs/client-key.pk8&sslcert=/tmp/certs/client-cert.pem"
-      postgresql:
-        # Enable to deploy the PostgreSQL chart
-        enabled: false
+  # sonarqube:
+  #   enabled: true
+  #   values:
+  #     resources:
+  #       limits:
+  #         cpu: 300m
+  #         memory: 4Gi
+  #       requests:
+  #         cpu: 300m
+  #         memory: 2.5Gi
+  #     persistence:
+  #       enabled: true
+  #       volumes:
+  #       - name: certs-tmp
+  #         emptyDir:
+  #           sizeLimit: "32k"
+  #       - name: certs-volume
+  #         secret:
+  #           secretName: certs-secret
+  #       mounts:
+  #       - name: certs-volume
+  #         mountPath: /tmp/custom-certs
+  #       - name: certs-tmp
+  #         mountPath: /tmp/certs
+  #     extraInitContainers:
+  #     - name: change-certs-ownership
+  #       image: alpine:3.6
+  #       command: ["sh", "-c", "cp /tmp/custom-certs/* /tmp/certs && chown -R 1000:1000 /tmp/certs]
+  #       securityContext:
+  #         runAsUser: 0
+  #         allowPrivilegeEscalation: false
+  #       volumeMounts:
+  #       - name: certs-tmp
+  #         mountPath: /tmp/certs
+  #       - name: certs-volume
+  #         mountPath: /tmp/custom-certs
+  #     jdbcUrlOverride: "jdbc:postgresql://192.168.50.108/postgres?ssl=true&sslmode=verify-ca&sslrootcert=/tmp/certs/server-ca.pem&sslkey=/tmp/certs/client-key.pk8&sslcert=/tmp/certs/client-cert.pem"
+  #     postgresql:
+  #       # Enable to deploy the PostgreSQL chart
+  #       enabled: false
   nexus:
     enabled: true
     values:
