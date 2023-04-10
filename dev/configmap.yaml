@@ -95,7 +95,7 @@ clusterAuditor:
 
 addons:
   sonarqube:
-    enabled: false
+    enabled: true
     values:
       resources:
         limits:
@@ -130,7 +130,6 @@ addons:
           mountPath: /tmp/certs
         - name: certs-volume
           mountPath: /tmp/custom-certs
-      # Override JDBC URL
       jdbcUrlOverride: "jdbc:postgresql://192.168.50.108/postgres?ssl=true&sslmode=verify-ca&sslrootcert=/tmp/certs/server-ca.pem&sslkey=/tmp/certs/client-key.pk8&sslcert=/tmp/certs/client-cert.pem"
       postgresql:
         # Enable to deploy the PostgreSQL chart
