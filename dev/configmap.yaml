@@ -44,6 +44,10 @@ monitoring:
           requests:
             cpu: 200m
             memory: 1Gi
+kiali:
+  enabled: false
+jaeger:
+  enabled: false
 
 fluentbit:
   enabled: false
