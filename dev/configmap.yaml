@@ -177,6 +177,9 @@ addons:
       gateway: "passthrough"
     values:
       replicas: 1
+      image:
+        repository: registry1.dso.mil/ironbank/opensource/keycloak/keycloak
+        tag: 16.1.1
       secrets:
         env:
           stringData:
