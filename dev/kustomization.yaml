@@ -26,14 +26,14 @@ patchesStrategicMerge:
     name: bigbang
   spec:
     interval: 1m
-    postRenderers:
-      - kustomize:
-          patchesJson6902:
-            - target:
-                kind: Namespace
-                version: v1
-                name: keycloak
-              patch:
-                - op: add
-                  path: /metadata/labels/k8s.twr.io~1imageswap
-                  value: enabled
+    # postRenderers:
+    #   - kustomize:
+    #       patchesJson6902:
+    #         - target:
+    #             kind: Namespace
+    #             version: v1
+    #             name: keycloak
+    #           patch:
+    #             - op: add
+    #               path: /metadata/labels/k8s.twr.io~1imageswap
+    #               value: enabled
