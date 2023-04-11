@@ -175,6 +175,36 @@ addons:
           persistence:
             enabled: false
 
+  authservice:
+    enabled: true
+    git:
+      tag: "0.5.3-bb.5"
+    values:
+      global:
+        jwks_uri: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/certs"
+        authorization_uri: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/auth"
+        client_id: "authservice"
+        client_secret: "DKwPdTjiAJhMO5LweP34r2PBS0CD2Osf"
+        token_uri: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/token"
+        logout_path: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/token/logout"
+        logout_redirect_uri: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/token/logout"
+    chains:
+      jttui:
+        match:
+          header: ":authority"
+          prefix: "jtt.sandbox.local"
+        callback_uri: "https://jtt.sandbox.local/jtt-ui"
+      jttrtdb:
+        match:
+          header: ":authority"
+          prefix: "jtt.sandbox.local"
+        callback_uri: "https://jtt.sandbox.local/rtdb"
+      jttfp:
+        match:
+          header: ":authority"
+          prefix: "jtt.sandbox.local"
+        callback_uri: "https://jtt.sandbox.local/file-proc"
+
   keycloak:
     enabled: true
     ingress:
