@@ -7,8 +7,16 @@ domain: sandbox.local
 #       type: "NodePort"
 #       nodePortBase: 30000
 
+istiooperator:
+  # -- Toggle deployment of Istio Operator.
+  enabled: true
+  git:
+    tag: "1.17.2-bb.0"
+
 istio:
   enabled: true
+  git:
+    tag: "1.17.2-bb.0"
   ingressGateways:
     passthrough-ingressgateway:
       type: "LoadBalancer"
