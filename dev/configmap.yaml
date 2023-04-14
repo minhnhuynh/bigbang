@@ -189,13 +189,13 @@ addons:
       tag: "0.5.3-bb.5"
     values:
       global:
-        jwks_uri: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/certs"
-        authorization_uri: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/auth"
-        client_id: "authservice"
-        client_secret: "DKwPdTjiAJhMO5LweP34r2PBS0CD2Osf"
-        token_uri: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/token"
-        logout_path: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/token/logout"
-        logout_redirect_uri: "https://keycloak.sandbox.local/auth/realms/baby-yoda/protocol/openid-connect/token/logout"
+        jwks_uri: "https://keycloak-nsft.nextgenfed.com/auth/realms/nsft-demo/protocol/openid-connect/certs"
+        authorization_uri: "https://keycloak-nsft.nextgenfed.com/auth/realms/nsft-demo/protocol/openid-connect/auth"
+        client_id: "authservice-sandbox"
+        client_secret: "DAF1xDk5R9LLEAtXozBZGsOPUMgc5K4u"
+        token_uri: "https://keycloak-nsft.nextgenfed.com/auth/realms/nsft-demo/protocol/openid-connect/token"
+        logout_path: "https://keycloak-nsft.nextgenfed.com/auth/realms/nsft-demo/protocol/openid-connect/token/logout"
+        logout_redirect_uri: "https://keycloak-nsft.nextgenfed.com/auth/realms/nsft-demo/protocol/openid-connect/token/logout"
     chains:
       jttui:
         match:
