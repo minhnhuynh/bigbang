@@ -202,17 +202,6 @@ addons:
           header: ":authority"
           prefix: "jtt.sandbox.local"
         callback_uri: "https://jtt.sandbox.local/jtt-ui"
-      jttrtdb:
-        match:
-          header: ":authority"
-          prefix: "jtt.sandbox.local"
-        callback_uri: "https://jtt.sandbox.local/rtdb"
-      jttfp:
-        match:
-          header: ":authority"
-          prefix: "jtt.sandbox.local"
-        callback_uri: "https://jtt.sandbox.local/file-proc"
-
   keycloak:
     enabled: true
     ingress:
