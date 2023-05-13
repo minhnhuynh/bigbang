@@ -206,11 +206,13 @@ addons:
         match:
           header: ":authority"
           prefix: "jtt.sandbox.local"
+          excluded_paths: "/v1/status"
         callback_uri: "https://jtt.sandbox.local/rtdb"
       fileproc:
         match:
           header: ":authority"
           prefix: "jtt.sandbox.local"
+          excluded_paths: "/v1/status"
         callback_uri: "https://jtt.sandbox.local/file-proc"
   keycloak:
     enabled: true
